@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            width: 100%;
+        }
+        
+        form {
+            display: flex;
+        }
+        
+        p {
+            color: white;
+            font-size: 60px;
+            line-height: 90px;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 100px;
+        }
+        
+        .right-1 h2 {
+            letter-spacing: 15px;
+            color: white;
+            font-size: 80px;
+            margin-top: 300px;
+        }
+        
+        .left {
+            background-color: rgb(4, 45, 45);
+            height: 100%;
+            width: 60%;
+            display: flex;
+            padding: 50px;
+        }
+        
+        .right {
+            position: absolute;
+            right: 0;
+            height: 137%;
+            width: 40%;
+            background-color: rgb(18, 61, 61);
+        }
+        
+        .left-1 {
+            width: 30%;
+            height: 100%;
+        }
+        
+        .left-2 {
+            display: flex;
+            flex-direction: column;
+            gap: 85px;
+            text-align: left;
+            height: 100%;
+        }
+        
+        label {
+            color: white;
+            font-size: 60px;
+        }
+        
+        input {
+            background-color: rgb(4, 45, 45);
+            padding: 70px;
+            border: 1px solid gray;
+            width: 200%;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .left-3 {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .left-4 {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .left-3 input {
+            width: 110%;
+            padding: 170px;
+        }
+        
+        select {
+            background-color: rgb(4, 45, 45);
+            padding: 50px;
+            border: 1px solid gray;
+            width: 200%;
+            color: white;
+            font-size: 50px;
+            position: absolute;
+            bottom: 0;
+        }
+        
+        input::placeholder {
+            font-size: 50px;
+        }
+        
+        .lr {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            position: relative;
+        }
+        
+        .lr-1 {
+            display: flex;
+            gap: 650px;
+        }
+        
+        .left-4 input {
+            height: 50px;
+            width: 50px;
+        }
+        
+        .right-1 {
+            margin-top: 20%;
+            margin-left: 20%;
+        }
+        
+        .r2 {
+            display: flex;
+            gap: 150px;
+            margin-top: 80px;
+        }
+        
+        .r2 a {
+            font-size: 80px;
+            color: white;
+        }
+        
+        .r3 {
+            display: flex;
+            gap: 80px;
+        }
+        
+        .r3 img {
+            height: 300px;
+            border-radius: 50%;
+            margin-top: 30px;
+            width: 300px;
+        }
+        
+        .r3 h3 {
+            color: white;
+            font-size: 70px;
+            font-family: 'Courier New', Courier, monospace;
+            margin-top: 100px;
+        }
+        
+        button {
+            padding: 50px;
+            width: 50%;
+            height: 50%;
+            font-size: 50px;
+        }
+        
+        input:focus {
+            border: 16px solid green;
+        }
+        
+        input:disabled {
+            background-color: red;
+        }
+        
+        input :placeholder-shown {
+            background-color: lightblue;
+            color: darkcyan;
+        }
+        /* /* input[type="checkbox"] :checked+label {
+            color: green;
+            font-weight: bold;
+        } 
+        
+        select option:checked {
+            background-color: lightblue;
+        }
+        
+        */
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post">
+
+
+        <div class="left">
+            <div class="left-1">
+
+            </div>
+            <div class="left-2">
+                <p>March 17,2021 12:00</p>
+                <h1>The help of Augmented Reality<br> and Holograms </h1>
+                <p>Use Augmented Reality to keep students engaged and provide<br> detailed explanations of models and course material.<br>In a 3D,AR Lab ,students can pinch,zoom,and rotate equipment
+                    <br>related to the course,for a fully immersive learning experience</p>
+                <h1>Join the event</h1>
+                <div class="lr-1">
+                    <div class="lr">
+                        <label for="fname">First name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Enter your first name">
+                        <label for="mail">Business mail</label>
+                        <input type="email" id="mail" name="email" placeholder="Enter your  email">
+                        <label for="cname">Company name</label>
+                        <input type="text" id="cname" placeholder="where do you work?">
+
+                    </div>
+                    <div class="lr">
+                        <label for="lname">Last name</label>
+                        <input type="text" id="lname" placeholder="Enter your Last name">
+                        <label for="title">Title</label>
+                        <input type="text" disabled id="title" placeholder="what is your job title">
+
+                        <label for="company">Company size</label>
+                        <select id="company" name="company" required>
+                           <option value="" disabled selected>Select </option>
+                           <option value="100">100 Employee</option>
+                           <option value="200">200 Employee</option>
+                           <option value="300">300 Employee</option>
+                           <option value="500">500 Employee</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="left-3">
+                    <label for="">What are you hoping to learn about</label>
+                    <input type="text" placeholder="Where do you work?">
+                </div>
+                <div class="left-4">
+                    <input type="checkbox" id="checkbox" name="checkbox">
+                    <label for="checkbox">I would like to receive emails about future webinars</label>
+                </div>
+                <button><b>Register for this event</b></button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-1">
+                <h1>Share</h1>
+                <div class="r2">
+                    <a href="http://www.facebook.com" title="facebook" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="http://www.twitter.com" title="twitter" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="http://www.linkedin.com" title="linkedin" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <h2>GUESTS</h2>
+                <div class="r3">
+                    <div><img src="girl.png" alt=""></div>
+                    <div>
+                        <h3>Lisa Alvin</h3>
+                        <p>Cofounder, Jea</p>
+                    </div>
+                </div>
+                <div class="r3">
+                    <div>
+                        <img src="./images/smilegirl.png" alt="" "></div>
+                    <div>
+                        <h3>Jenny Pick</h3>
+                        <p>Head of Education,Jea</p>
+                    </div>
+                </div>
+                <div class=" r3 ">
+                    <div><img src="girl.png " alt=" "></div>
+                    <div>
+                        <h3>Peter Scott</h3>
+                        <p>Founder,Jea</p>
+                    </div>
+                </div>
+                <h2>Hosted By</h2>
+                <div class="r3 ">
+                    <div><img src="girl.png " alt=" "></div>
+                    <div>
+                        <h3>Lisa Alvin</h3>
+                        <p>Cofounder, Jea</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>
+
+</html>

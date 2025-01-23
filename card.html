@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+        }
+        
+        .team-container {
+            height: 90%;
+            width: 90%;
+            background-color: red;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .team-card {
+            height: 70%;
+            width: 500px;
+            padding: 10px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(25, 25, 54);
+            overflow: hidden;
+        }
+        
+        .team-card img {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+        
+        .social-bar {
+            height: 150px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            transition: transform 2s ease;
+            transform: translateY(150px);
+        }
+        
+        .social-bar a {
+            font-size: 100px;
+            padding: 10px;
+            color: pink;
+        }
+        
+        .team-card:hover .social-bar {
+            transform: translateY(0);
+        }
+        
+        h1 {
+            position: absolute;
+            font-size: 100px;
+            color: white;
+            top: 30%;
+            transition: transform 2s ease;
+            transform: translateX(130%);
+        }
+        
+        .team-card:hover h1 {
+            transform: translateX(0);
+        }
+        
+        .team-container .team-card:nth-child(even) {
+            animation: slidedown 2s ease;
+        }
+        
+        .team-container .team-card:nth-child(odd) {
+            animation: slideup 2s ease;
+        }
+        
+        @keyframes slidedown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideup {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<div class="team-container">
+    <div class="team-card">
+        <img src="girl.png" alt="">
+        <h1>Bhavika</h1>
+        <div class="social-bar">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    <div class="team-card">
+        <img src="./images/smilegirl.png" alt="">
+        <h1>Gayatri</h1>
+        <div class="social-bar">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    <div class="team-card">
+        <img src="girl.png" alt="">
+        <h1>Vishakha</h1>
+        <div class="social-bar">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    <div class="team-card">
+        <img src="./images/smilegirl.png" alt="">
+        <h1>Gayatri</h1>
+        <div class="social-bar">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    <div class="team-card">
+        <img src="girl.png" alt="">
+        <h1>Bhavika</h1>
+        <div class="social-bar">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    <div class="team-card">
+        <img src="./images/smilegirl.png" alt="">
+        <h1>Vishakha</h1>
+        <div class="social-bar">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</div>
+
+</html>

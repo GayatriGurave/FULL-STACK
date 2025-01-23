@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .left {
+            background-color: rgb(26, 15, 31);
+            height: 100vh;
+            position: absolute;
+            width: 100%;
+            top: 0;
+        }
+        
+        .right {
+            background-color: orangered;
+            height: 100vh;
+            width: 40%;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 100px;
+            position: absolute;
+            left: 25%;
+            top: 15%;
+            animation: slidein 1s ease;
+        }
+        
+        h2 {
+            color: white;
+            font-size: 50px;
+            position: absolute;
+            left: 25%;
+            top: 21%;
+            animation: slidein 1s ease;
+        }
+        
+        ul {
+            color: white;
+            position: absolute;
+            left: 25%;
+            font-size: 70px;
+            top: 35%;
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            animation: slidein 1s ease;
+            /* list-style-type: square; */
+        }
+        
+        ul li::marker {
+            color: rgb(255, 183, 0);
+            font-size: 150px;
+        }
+        
+        li {
+            width: 70%;
+        }
+        
+        .left a {
+            background-color: rgb(255, 183, 0);
+            color: black;
+            padding: 20px;
+            font-size: 70px;
+            border-radius: 50%;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            top: 85%;
+            display: flex;
+            text-decoration: none;
+        }
+        
+        .i1 {
+            left: 23%;
+            animation: rotatein 1s ease;
+        }
+        
+        .i2 {
+            left: 26%;
+            animation: rotatein 1s ease;
+        }
+        
+        .i3 {
+            left: 29%;
+            animation: rotatein 1s ease;
+        }
+        
+        .i4 {
+            left: 32%;
+            animation: rotatein 1s ease;
+        }
+        
+        img {
+            position: absolute;
+            right: 3%;
+            top: 10%;
+            height: 80%;
+            width: 50%;
+            animation: zoomin 1s ease;
+        }
+        
+        @keyframes zoomin {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes slidein {
+            from {
+                transform: translateX(-100%)
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes rotatein {
+            from {
+                transform: rotate(90deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="left">
+
+        <h1><span style="color: rgb(255, 183, 0);">SOCIAL MEDIA</span></h1>
+        <h2>FOOD BANNER TEMPLATE</h2>
+        <ul>
+            <li>IMAGE IS NOT INCLUDED</li>
+            <li>EASILY EDITABLE</li>
+            <li>PSD FILE WITH SMART OBJECT</li>
+
+        </ul>
+        <div>
+            <a href="https://www.instagram.com" title="instagram" target="_blank" class="i1">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com" title="facebooks" target="_blank" class="i2">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.twitter.com" title="twitter" target="_blank" class="i3">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.whatsapp.com" title="whatsapp" target="_blank" class="i4">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
+        <div class="right">
+
+        </div>
+        <img src="./images/beefBurger.png" alt="">
+    </div>
+
+
+
+
+
+</body>
+
+</html>

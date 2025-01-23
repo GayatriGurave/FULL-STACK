@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            width: 100%;
+        }
+        
+        header {
+            display: flex;
+            height: 300px;
+            width: 100%;
+            gap: 15%;
+        }
+        
+        ul {
+            display: flex;
+            gap: 100px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        
+        li {
+            list-style: none;
+            font-size: 100px;
+        }
+        
+        .btn {
+            height: 100px;
+            width: 300px;
+            margin-top: 100px;
+            font-size: 50px;
+            border-radius: 50px;
+            background-color: rgb(241, 78, 8);
+            color: white;
+        }
+        
+        .image img {
+            height: 100vh;
+            width: 100%;
+        }
+        
+        .image h1 {
+            position: absolute;
+            top: 30%;
+            color: white;
+            left: 10%;
+            font-size: 200px;
+            animation: slideleft 2s ease;
+        }
+        
+        @keyframes slideleft {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        
+        .image h2 {
+            position: absolute;
+            top: 50%;
+            font-size: 150px;
+            color: white;
+            left: 10%;
+            animation: slideleft 2s ease;
+        }
+        
+        h1 {
+            font-size: 100px;
+            text-align: center;
+            margin-top: 5%;
+        }
+        
+        .container {
+            height: 90%;
+            width: 60%;
+            display: flex;
+            margin-top: 3%;
+            justify-content: center;
+            gap: 100px;
+            margin-left: 20%;
+        }
+        
+        .item {
+            height: 50%;
+            width: 30%;
+            background-color: white;
+            margin-bottom: 25%;
+        }
+        
+        .item-3 {
+            background-color: rgb(11, 37, 11);
+            height: 100%;
+            animation: slidedown 1s ease;
+        }
+        
+        @keyframes slidedown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translate(0);
+            }
+        }
+        
+        .food {
+            height: 50%;
+            width: 30%;
+            animation: slideleft 1s ease;
+        }
+        
+        .food-1 {
+            animation: slideright 1s ease;
+        }
+        
+        .food-1 img {
+            height: 700px;
+            width: 900px;
+            position: relative;
+            bottom: 55%;
+            left: 5%;
+        }
+        
+        .ph {
+            position: relative;
+            bottom: 57%;
+        }
+        
+        .food img {
+            height: 700px;
+            width: 900px;
+        }
+        
+        .item img {
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            margin-top: 10%;
+            margin-left: 25%;
+        }
+        
+        .item-1 {
+            background-color: rgb(25, 25, 53);
+            height: 100%;
+            animation: slidedown 2s ease;
+        }
+        
+        .item-2 {
+            background-color: rgb(46, 26, 26);
+            height: 100%;
+            animation: slidedown 3s ease;
+        }
+        
+        .item h1 {
+            color: white;
+        }
+        
+        .item h2 {
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            margin-top: 10%;
+        }
+        
+        p {
+            margin-left: 10%;
+            margin-top: 20px;
+            font-size: 50px;
+            color: white;
+        }
+        
+        .para {
+            position: absolute;
+            color: white;
+            top: 60%;
+            left: 8%;
+        }
+        
+        .para p {
+            font-size: 80px;
+        }
+        
+        .head {
+            position: absolute;
+            top: 200%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            left: 35%;
+        }
+        
+        .head img {
+            position: absolute;
+            left: 190%;
+            height: 500px;
+            width: 500px;
+            bottom: 10%;
+            border-radius: 30%;
+            animation: rotatein 2s ease;
+        }
+        
+        @keyframes rotatein {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(180deg);
+            }
+        }
+        
+        .btn1 {
+            position: absolute;
+            font-size: 60px;
+            left: 10%;
+            top: 150%;
+            padding: 30px;
+            border-radius: 100px;
+            background-color: orangered;
+            color: white;
+        }
+        
+        .btn2 {
+            position: absolute;
+            font-size: 60px;
+            left: 50%;
+            top: 150%;
+            padding: 30px;
+            border-radius: 100px;
+            color: yellowgreen;
+            border-color: yellowgreen;
+            background-color: black;
+        }
+        
+        .roll {
+            display: flex;
+            margin-left: 10%;
+        }
+        
+        .roll img {
+            height: 80%;
+            width: 100%;
+            border-radius: 50px;
+            animation: slideleft 1s ease;
+        }
+        
+        @keyframes slideright {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        
+        .roll p {
+            font-size: 100px;
+            color: black;
+        }
+        
+        .btn3 {
+            position: absolute;
+            font-size: 60px;
+            padding: 30px;
+            border-radius: 100px;
+            background-color: orangered;
+            color: white;
+            right: 50%;
+            top: 260%;
+        }
+        
+        .btn-4 {
+            position: absolute;
+            font-size: 60px;
+            padding: 30px;
+            border-radius: 100px;
+            background-color: orangered;
+            color: white;
+            right: 47%;
+            top: 405%;
+        }
+        
+        .page p {
+            color: black;
+            font-size: 80px;
+            margin-left: 20%;
+        }
+        
+        .cont-1 {
+            position: relative;
+            height: 80%;
+            width: 100%;
+            background-color: black;
+            bottom: 70%;
+            display: flex;
+        }
+        
+        .left {
+            position: absolute;
+            color: white;
+            left: 10%;
+            top: 20%;
+            word-spacing: 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            animation: slideleft 1s ease;
+        }
+        
+        .left p {
+            margin-top: 10%;
+            margin-left: 15%;
+        }
+        
+        .btn-5 {
+            position: absolute;
+            font-size: 60px;
+            padding: 30px;
+            border-radius: 100px;
+            background-color: orangered;
+            color: white;
+            right: 65%;
+            margin-top: 10%;
+        }
+        
+        .salad img {
+            position: absolute;
+            height: 70%;
+            width: 30%;
+            bottom: 15%;
+            border-radius: 50%;
+            right: 15%;
+        }
+        
+        .off p {
+            background-color: yellow;
+            color: black;
+            border-radius: 50%;
+            height: 15%;
+            width: 5%;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            font-size: 70px;
+            position: absolute;
+            right: 15%;
+            top: 20%;
+        }
+        
+        .left-1 img {
+            position: absolute;
+            height: 100%;
+            width: 30%;
+            right: 60%;
+            top: 10%;
+        }
+        
+        .cont-2 {
+            position: relative;
+            height: 80%;
+            width: 100%;
+            bottom: 70%;
+            display: flex;
+        }
+        
+        .right p {
+            position: absolute;
+            right: 20%;
+            top: 30%;
+            color: black;
+            font-size: 100px;
+            animation: slideright 1s ease;
+        }
+        
+        .right-p p {
+            position: absolute;
+            right: 21%;
+            top: 50%;
+            color: black;
+            font-size: 50px;
+            animation: slideright 1s ease;
+        }
+        
+        .right img {
+            position: absolute;
+            right: 26%;
+            bottom: 20%;
+            animation: slideright 1s ease;
+        }
+        
+        .foot {
+            position: relative;
+            height: 60%;
+            bottom: 30%;
+            display: flex;
+            background-color: black;
+        }
+        
+        .contact h1 {
+            position: absolute;
+            left: 10%;
+            font-size: 100px;
+        }
+        
+        .contact a {
+            position: absolute;
+            font-size: 100px;
+            text-decoration: none;
+            color: aquamarine;
+            left: 10%;
+            top: 35%;
+            display: flex;
+            gap: 10%;
+        }
+        
+        .contact p {
+            font-size: 70px;
+        }
+        
+        .p1 p {
+            position: absolute;
+            left: 40%;
+            top: 35%;
+        }
+        
+        .social-icons a {
+            position: absolute;
+            font-size: 100px;
+            text-decoration: none;
+            color: aquamarine;
+            left: 80%;
+            top: 35%;
+            display: flex;
+            gap: 10%;
+        }
+        
+        .p2 p {
+            position: absolute;
+            bottom: 5%;
+            left: 30%;
+            word-spacing: 10px;
+            animation: slideright 1s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <header><img src="./images/foodlogo.png" alt="">
+        <nav>
+            <ul>
+                <li>Our Foods</li>
+                <li>Our Locations</li>
+                <li>About Us</li>
+            </ul>
+        </nav><button class="btn">Order Now</button><img src="./images/man.png" alt="" style="border-radius: 50%;"></header>
+    <div class="image"><img src="./images/noodle.png" alt="">
+        <h1>Best thai food in</h1>
+        <h2>los angeles</h2>
+        <div class="para">
+            <p>Looking for an eco-friendly restraunt in</p>
+            <p>United states? Check out selection of</p>
+            <p>Sustainable restraunt</p><button class="btn1">Order Online</button><button class="btn2">Book a Table</button></div>
+    </div>
+    <div>
+        <h1>We Offer Top Notch !!</h1>
+    </div>
+    <section class="container">
+        <div class="item">
+            <div class="item-3"><img src="./images/Breakfast.png" alt="">
+                <h1>BreakFast</h1>
+                <p>As Export Specialist with more than Food group will work with</p>
+                <h2>View More</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-1"><img src="./images/appertizers.png" alt="">
+                <h1>Appertizers</h1>
+                <p>As Export Specialist with more than Food group will work with</p>
+                <h2>View More</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-2"><img src="./images/dessert.png" alt="">
+                <h1>Desserts</h1>
+                <p>As Export Specialist with more than Food group will work with</p>
+                <h2>View More</h2>
+            </div>
+        </div>
+    </section>
+    <div class="head">
+        <h1>Good things comes to those</h1>
+        <h1>who cook for others</h1><img src="./images/dosa.png" alt=""></div>
+    <section class="roll">
+        <div><img src="./images/rolls.png" alt=""></div>
+        <div>
+            <p>this is the food that are rolled up and not simply those .</p>
+            <p>that contain the word "roll" in their name</p>
+            <p>Many types of rolled foods exist, including those in the forms of</p>
+            <p>dishes, prepared foods, snacks and candles</p><button class="btn3">Order now</button></div>
+    </section>
+    <h1>This Weeks Top Recipies</h1>
+    <div class="page">
+        <p>Recipes provide the cinsistency in the production of menu item.recipe provide the food cost control.</p>
+        <p style="margin-left: 30%;">Recipes provide knowledge for front of the house staff as a sales tool.</p>
+    </div>
+    <section class="container">
+        <div class="food"><img src="./images/beefBurger.png" alt="">
+            <h1>Burger is the slice </h1>
+            <p style="color: black;">bread Roll and bun burger are often garnished with tomattos, cheese
+            </p>
+        </div>
+        <div class="food"><img src="./images/man.png" alt="">
+            <h1>It is like Appetizers. </h1>
+            <p style="color: black;">Fried balls are coated lightly in the sauce for a sticky, flavorable coating</p>
+        </div>
+        <div class="food"><img src="./images/cheezyfood.png" alt="">
+            <h1>cheeezyy Roll</h1>
+            <p style="color: black;">soft and tangy, perfect for spreads and dips</p>
+        </div>
+    </section>
+    <section class="container">
+        <div class="food-1"><img src="./images/biryani.png" alt="">
+            <div class="ph">
+                <h1>It is Spiced Rice. </h1>
+                <p style="color: black;">It is made by Layered Spiced rice with seafood or vegetables</p>
+            </div>
+        </div>
+        <div class="food-1"><img src="./images/pavbhaji.png" alt="">
+            <div class="ph">
+                <h1>Indian Street Food. </h1>
+                <p style="color: black;">It is made by Vegetable Mash with Soft, white bread rolls toasted ith butter</p>
+            </div>
+        </div>
+        <div class="food-1"><img src="./images/samosa.png" alt="">
+            <div class="ph">
+                <h1>It is Crispy. </h1>
+                <p style="color: black;">It is made with all a flavorable stuffing added ghee for flacky texture</p>
+            </div>
+        </div>
+    </section><button class="btn-4">Explore Now</button>
+    <section class="cont-1">
+        <div class="left">
+            <h1>Get Upto <span style="color: red;">50%</span>Offer On<br>Festival Season!</h1>
+            <p>Indian food is renowned worldwide for its rich<br>Flavors Many Indians follow vegetarian diets,
+                <br>leading Ingredients like ghee, yogurt, and paneer are widely used</p><button class="btn-5">Order Now</button>
+        </div>
+        <div class="salad"><img src="./images/salad.png" alt="">
+            <div class="off">
+                <p><span style="color: red;">50%</span>Off</p>
+            </div>
+        </div>
+    </section>
+    <section class="cont-2">
+        <div class="left-1"><img src="./images/card-food.png" alt=""></div>
+        <div class="right">
+            <p><b>Download the Indian Food now<br>available on iphone & <br>Android</b></p><img src="./images/googleplay.png" alt=""></div>
+        <div class="right-p">
+            <p style="color: black;">Indian food is renowned worldwide for its rich<br>Flavors Many Indians follow vegetarian diets,
+                <br>leading Ingredients like ghee, yogurt, and paneer are widely used</p>
+        </div>
+    </section>
+    <footer class="foot">
+        <div class="contact">
+            <h1 style="color: aquamarine;">Indian Food</h1>
+            <a href="#" title="Mail">
+                <i class="fa-solid fa-envelope "></i>
+                <p>Indianfood@gmail.com</p>
+            </a>
+            <a href="#" title="phone " style="margin-top: 5%; ">
+                <i class="fa-solid fa-phone "></i>
+                <p>+917465982360</p>
+            </a>
+            <a href="#" title="Location" style="margin-top: 10%; ">
+                <i class="fa-solid fa-location-dot "></i>
+                <p>Lonkheda,Shahada</p>
+            </a>
+        </div>
+        <div class="contact">
+            <h1 style="color: white;margin-left: 40%;">Our Menu</h1>
+            <div class="p1">
+                <p>Breakast</p>
+                <p style="top: 53%;">Lunch</p>
+                <p style="top: 73%;">Dinner</p>
+            </div>
+        </div>
+        <div class="contact">
+            <h1 style="color: white;margin-left: 70%;">Social</h1>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" title="Facebook" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                    <p>Facebook</p>
+                </a>
+                <a href="https://www.twitter.com" title="Twitter" target="_blank" style="top: 53%;">
+                    <i class="fab fa-twitter"></i>
+                    <p>Twitter</p>
+                </a>
+                <a href="https://www.instagram.com" title="Instagram" target="_blank" style="top: 73%;">
+                    <i class="fab fa-instagram"></i>
+                    <p>Instagram</p>
+                </a>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="p2">
+                <p>Copyright Powered by <b> Gayatri_Gurave</b>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+*********30-12-24***********
+for text on image
+types of positions
+1.Absolute
+2.Relative
+3.sticky
+4.fixed
+
+1.Absolute: target the particular element
+rgba(red,green,blue,alpha)
+alpha-opacity-used for transparency
+rgba(255,0,0,0.5)
+display red layer on image
+alpha like opacity-0 to 1
+
+span tag is inline text css applied to particular text.
+
+
+********2-1-25*********
+Animation
+#Functions of Animation:
+             1.translate x translate y 
+             2.Scaling
+             3.Rotate
+             4.Skew -zoomin
+#property
+            1.transition - how to change
+            2.tranformation - change
+            3.Animation
+
+#At Rule
+            1.@keyframes -Animation From(0%) - to(100%)
+            2.@import
+            3.@media-responsive UI
+
+#Css has two classes
+     1.Pseudo selecter(classes)
+        1.first-child
+        2.last-child
+        3.nth-child 
+     2.Pseudo element
+        1.first-letter
+        2.first-line
+#Form
+       psedo selecter for forms 
+        1.Focus
+        2.checked
+        3.disable
+        4.unable
+        4.placeholder
+        5.valid 
+        6.invalid
+        7.placeholder-shown
+
+#fonts
+       1.font-family
+       2.letter-space
+       3.word-space
+       4.font-weight
+
+# allpying div for multiple classes
+            div.item{block $}*5  -->  <div class="item">block 1</div>   repeat for 5 times
+
+# Grid
+      repeat(auto-fill,minmax(200px,1fr)) --> for respponsive UI
+      grid-row-start
+      grid-row-end
+      grid-column-start
+      grid-column-end
+      
+
+#Git-Hub      
+   -it is the online hosting service where the developres can manage theire code
+   -share thiere code with version control 
+     Sample-project
+     /           \ 
+   Local ----> Remote
+          push
+         <-----
+         pull
+methods-
+        publish
+        pull
+        push
+        commit
+        Sync Changes
+        clone
+        merge
+        branches
+
+#Git-is the software and it is download locally
+#Github is the services host on the web 

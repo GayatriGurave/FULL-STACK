@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        nav {
+            height: 10px;
+            margin: auto;
+        }
+        
+        header {
+            height: 100px;
+            display: flex;
+        }
+        
+        header img {
+            position: absolute;
+            height: 7%;
+            border-radius: 50%;
+            border: 10px solid rgb(78, 78, 160);
+            left: 20%;
+            top: 1%;
+            background-color: rgb(194, 137, 247);
+            padding: 30px;
+        }
+        
+        header h1 {
+            position: absolute;
+            left: 24%;
+            top: 3%;
+            font-size: 70px;
+        }
+        
+        ul {
+            list-style: none;
+            text-decoration: none;
+            display: flex;
+            gap: 100px;
+            font-size: 100px;
+            position: absolute;
+            left: 50%;
+        }
+        
+        .left {
+            position: absolute;
+            bottom: 50%;
+            left: 20%;
+            font-size: 70px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            top: 20%;
+        }
+        
+        .right {
+            position: absolute;
+            right: 30%;
+            bottom: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: cente;
+            flex-grow: 1;
+            top: 30%;
+            height: 40%;
+        }
+        
+        .right img {
+            border-radius: 50%;
+        }
+        
+        button {
+            padding: 10px;
+            font-size: 50px;
+            border-radius: 30px;
+            width: 30%;
+        }
+        
+        .btn1 {
+            background-color: rgb(129, 129, 222);
+        }
+        
+        .btn2 {
+            border: none;
+        }
+        
+        .proj {
+            display: flex;
+            gap: 50px;
+            position: absolute;
+            bottom: 30%;
+            left: 20%;
+            font-size: 70px;
+        }
+        
+        .icon {
+            position: absolute;
+            font-size: 100px;
+            right: 50px;
+            top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="./images/g.png" alt="">
+        <h1>Gayatri</h1>
+
+        <nav>
+
+            <ul>
+                <li>About</li>
+                <li>Service</li>
+                <li>Portfolio</li>
+                <li>Project</li>
+                <li>Contact</li>
+            </ul>
+
+        </nav>
+        <div class="icon">
+            <a href="https://www.facebook.com" title="Facebook" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.whatsapp.com" title="whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
+    </header>
+    <section>
+        <div class="left">
+            <div>
+                <h1>Make <span style="color: rgb(184, 127, 237);">Design</span> That</h1>
+                <h1>Engage,Delight,</h1>
+                <h1>and Connect</h1>
+            </div>
+            <div>
+                <p>Hi I'am Gayatri! with 10 years of experience</p>
+                <p>I'am ready to be part of your wonderful projects</p>
+            </div>
+
+            <div>
+                <button class="btn1">Hire Me</button>
+                <button class="btn2">Prevoius works</button>
+
+            </div>
+
+        </div>
+        <div class="right">
+            <img src="girl.png" alt="">
+        </div>
+
+        <div class="proj">
+
+            <div>
+                <h1>650+</h1>
+                <p>Projects Done</p>
+            </div>
+            <div>
+                <h1>99%</h1>
+                <p>Happy Clients</p>
+            </div>
+            <div>
+                <h1>240+</h1>
+                <p>Fine Works</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

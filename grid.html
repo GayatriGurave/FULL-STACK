@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        header {
+            grid-area: header;
+            background-color: yellow;
+            text-align: center;
+            padding: 12px;
+            font-size: 50px;
+            animation: sdown 1s ease;
+        }
+        
+        nav {
+            grid-area: nav;
+            background-color: aquamarine;
+            text-align: center;
+            padding: 12px;
+            font-size: 50px;
+            animation: sleft 1s ease;
+        }
+        
+        main {
+            grid-area: main;
+            background-color: black;
+            text-align: center;
+            padding: 12px;
+            font-size: 50px;
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            padding: 20px;
+            animation: zoomin 1s ease;
+        }
+        
+        aside {
+            grid-area: aside;
+            background-color: skyblue;
+            text-align: center;
+            padding: 12px;
+            font-size: 50px;
+            animation: sright 1s ease;
+        }
+        
+        footer {
+            grid-area: footer;
+            background-color: orangered;
+            text-align: center;
+            padding: 12px;
+            font-size: 50px;
+            animation: sup 1s ease;
+        }
+        
+        .container {
+            display: grid;
+            gap: 50px;
+            grid-template-areas: "header header header" "nav main aside" "footer footer footer";
+            grid-template-columns: auto 3fr 1fr;
+            grid-template-rows: 1fr 3fr 1fr;
+            height: 100vh;
+            /* grid-template-columns: repeat(auto-fill, minmax(500, 1fr)); */
+        }
+        
+        .g-item {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+        }
+        
+        @keyframes sleft {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes sright {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes sdown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes sup {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes zoomin {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(100%);
+            }
+        }
+        
+        @media screen and (orientation: portrait) {
+            .container {
+                grid-template-areas: "header" "nav" "main" "aside" "footer";
+                grid-template-columns: 1fr;
+                grid-template-rows: 100px auto 1fr 100px auto;
+            }
+            main {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(8, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>Header</header>
+        <nav>Sidebar</nav>
+        <aside>Aside</aside>
+        <main>
+            <div class="g-item">
+                1
+            </div>
+            <div class="g-item">
+                2
+            </div>
+            <div class="g-item">
+                3
+            </div>
+            <div class="g-item">
+                4
+            </div>
+            <div class="g-item">
+                5
+            </div>
+            <div class="g-item">
+                6
+            </div>
+            <div class="g-item">
+                7
+            </div>
+            <div class="g-item">
+                8
+            </div>
+        </main>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box {
+        height: 300px;
+        width: 300px;
+        position: relative;
+        background-color: red;
+        border: 5px solid cyan;
+    }
+    
+    .box::after {
+        content: "A";
+        font-size: 50px;
+        border-radius: 50%;
+        padding: 10px;
+        position: absolute;
+        right: 0;
+        transform: translateX(-60px);
+        rotate: 20deg;
+        top: -40px;
+        border: 1px solid cyan;
+        background-color: green;
+    }
+    
+    .box::before {
+        content: "S";
+        font-size: 50px;
+        border-radius: 50%;
+        padding: 10px;
+        position: absolute;
+        /* transform: translateX(-60px); */
+        rotate: 20deg;
+        top: -40px;
+        z-index: -5;
+        border: 1px solid cyan;
+        background-color: green;
+    }
+    
+    img {
+        position: absolute;
+        bottom: 0;
+        height: 30%;
+        width: 100%;
+    }
+</style>
+
+<body>
+
+</body>
+<div class="box"></div>
+<img src="./images/wave.png" alt="">
+
+</html>

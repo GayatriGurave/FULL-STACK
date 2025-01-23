@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            grid-area: header;
+            background-color: gray;
+            text-align: center;
+            padding: 12px;
+            border-radius: 50px;
+            font-size: 200px;
+        }
+        
+        main {
+            grid-area: main;
+            background-color: gray;
+            text-align: center;
+            padding: 12px;
+            border-radius: 50px;
+            font-size: 200px;
+        }
+        
+        .container {
+            display: grid;
+            gap: 50px;
+            grid-template-areas: "header  header main side" "footer nav main side";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 100vh;
+            color: white;
+        }
+        
+        nav {
+            grid-area: nav;
+            background-color: gray;
+            text-align: center;
+            padding: 12px;
+            border-radius: 50px;
+            font-size: 200px;
+        }
+        
+        side {
+            grid-area: side;
+            background-color: gray;
+            text-align: center;
+            padding: 12px;
+            border-radius: 50px;
+            font-size: 200px;
+        }
+        
+        footer {
+            grid-area: footer;
+            background-color: gray;
+            text-align: center;
+            padding: 10px;
+            border-radius: 50px;
+            font-size: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>A</header>
+        <nav>B</nav>
+        <main>C</main>
+        <side>D</side>
+        <footer>E</footer>
+    </div>
+</body>
+
+</html>

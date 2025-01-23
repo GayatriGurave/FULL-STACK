@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: black;
+        }
+        
+        header {
+            background-color: aqua;
+            height: 500px;
+            display: flex;
+        }
+        
+        nav {
+            height: 10px;
+            margin: auto;
+        }
+        
+        header ul {
+            display: flex;
+            gap: 100px;
+            justify-content: center;
+            text-decoration: none;
+            list-style: none;
+            align-items: center;
+        }
+        
+        footer ul {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            text-decoration: none;
+            list-style: none;
+            align-items: center;
+        }
+        
+        li a {
+            text-decoration: none;
+            font-size: 100px;
+        }
+        
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .about_sec {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            gap: 70px;
+            padding: 10px;
+            align-items: center;
+        }
+        
+        .about_sec p {
+            font-size: 80px;
+            margin-top: 20px;
+            text-align: justify;
+            color: white;
+        }
+        
+        .about_sec h1 {
+            text-align: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .footer_sec {
+            height: 40vh;
+            width: 100%;
+            display: flex;
+            gap: 100px;
+            padding-top: 10px;
+            background-color: cyan;
+        }
+        
+        .footer_sec h2 {
+            color: black
+        }
+        
+        .footer_sec p {
+            padding-top: 20px;
+            text-align: justify;
+            font-size: 70px;
+            margin-left: 10%;
+        }
+        
+        .fea_sec {
+            height: 80%;
+            width: 90%;
+            display: flex;
+            gap: 80px;
+            align-items: center;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        
+        .feature-item {
+            height: 100%;
+            flex-grow: 1;
+            background-color: white;
+            padding: 50px;
+            width: 50%;
+            border-radius: 10px;
+        }
+        
+        .feature-item:nth-child(odd) {
+            animation: odd 1s ease;
+        }
+        
+        @keyframes odd {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .feature-item span {
+            background-color: lightseagreen;
+            border-radius: 50%;
+            padding: 40px;
+            font-size: 70px;
+        }
+        
+        .feature-item {
+            font-size: 70px;
+        }
+        
+        .feature-item h1 {
+            margin-top: 40px;
+            font-size: 100px;
+        }
+        
+        footer i:hover {
+            background-color: lightcoral;
+        }
+        
+        .course-item {
+            flex-grow: 1;
+            background-color: white;
+            border-radius: 10px;
+            padding: 80px;
+            height: 80%;
+            align-items: center;
+            animation: slideright 2s ease;
+        }
+        
+        ul li {
+            font-size: 60px;
+        }
+        
+        .course-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-image: url(bg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .course-item img {
+            height: 80%;
+            width: 80%;
+        }
+        
+        .full h1,
+        h2 {
+            text-align: center;
+            color: lightskyblue;
+            font-size: 100px;
+        }
+        
+        .cont_sec {
+            display: flex;
+            animation: slideleft 2s ease;
+        }
+        
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-right: 10%;
+            font-size: 50px;
+        }
+        
+        .pading {
+            padding: 50px;
+            border-radius: 10px;
+        }
+        
+        .about-container {
+            animation: slideleft 2s ease-in;
+        }
+        
+        .mission-container {
+            animation: slideright 2s ease;
+        }
+        /* @keyframes zoomin {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        } */
+        
+        @keyframes slideleft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideright {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        input::placeholder {
+            font-size: 45px;
+        }
+        
+        button {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body alink="orange" vlink="red">
+    <header>
+
+        <img src="kbcnmuLogo.png" alt="">
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#feature">Feature</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="feature" class="fea_sec">
+        <div class="feature-item">
+            <span>
+                01
+            </span>
+            <h1>Job Placement</h1>
+            <p>
+                We provide full Placement assistance to choose your dream career.
+            </p>
+        </div>
+        <div class="feature-item">
+            <span>
+                02
+            </span>
+            <h1>Certified Experience</h1>
+            <p>
+                We prove experience certificate for projects you have done.
+            </p>
+        </div>
+        <div class="feature-item">
+            <span>
+                03
+            </span>
+            <h1>Trending Courses</h1>
+            <p>
+                We offer you the latest technology courses to stay updated in this competitive world.
+            </p>
+        </div>
+
+
+    </section>
+
+    <section id="about" class="about_sec">
+        <div class="about-container">
+            <h1 style="color: darkturquoise;font-size: 100px;">About Us</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo id totam harum vel dicta veniam ab, temporibus optio culpa laborum blanditiis fuga eos. Dignissimos, incidunt rerum eos sapiente quasi similique? Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Praesentium voluptatibus ipsa porro iure cupiditate explicabo eos sunt reprehenderit sequi numquam. Qui, tenetur saepe! Unde officia odio nesciunt ipsam architecto necessitatibus.
+            </p>
+        </div>
+        <div class="mission-container">
+            <h1 style="color: darkturquoise;font-size: 100px;">Our Mission</h1>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quisquam ullam minus ratione eaque repellendus incidunt dolore, a dolorem quibusdam facere libero perferendis omnis. Illo temporibus alias molestiae blanditiis ducimus. Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit. Eveniet ad adipisci optio aliquam, incidunt, officia error illo nemo porro maiores quas quis cumque nesciunt, animi voluptas consectetur assumenda totam esse.
+            </p>
+        </div>
+    </section>
+    <div class="full">
+        <h1>Full Stack Web Development</h1>
+        <h2>With Industrial Training</h2>
+    </div>
+    <section id="home" class="course-section">
+        <div class="course-item">
+            <img src="html.png" alt="">
+            <h2>HTML</h2>
+            <ul>
+                <li>Hyper Text Markup Language</li>
+
+            </ul>
+        </div>
+        <div class="course-item">
+            <img src="js.png" alt="">
+            <h2>JavaScript</h2>
+            <ul>
+                <li>Multi Paradigm Language</li>
+                <li>Dynamic language</li>
+            </ul>
+        </div>
+
+        <div class="course-item">
+            <img src="java.png" alt="Java">
+            <h2>JAVA</h2>
+            <ul>
+                <li>Platform Independent</li>
+                <li>Multithreading</li>
+                <li>Distributed</li>
+            </ul>
+
+        </div>
+        <div class="course-item">
+            <img src="python.png" alt="Python">
+            <h2>PYTHON</h2>
+            <ul>
+                <li>Object Oriented</li>
+                <li>Free and Open Source</li>
+                <li>High Level</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section id="contact" class="cont_sec ">
+
+        <div class="contact">
+            <h1 style="color: white;">Contact Us</h1>
+            <h2 style="color: white;">We love conversation let us talk</h2>
+            <input type="text" placeholder="Enter Full name" class="pading">
+            <input type="text" placeholder="Enter Email address" class="pading">
+            <input type="number" placeholder="Enter mobile no" class="pading">
+            <input type="text" placeholder="Enter query" style="padding: 100px;border-radius: 20px;">
+            <button style="padding: 50px; border-radius: 20px; width: 50%;">Send message</button>
+        </div>
+        <div>
+            <img src="girl.png" alt="">
+        </div>
+    </section>
+
+
+    <footer class="footer_sec ">
+        <div>
+            <h2>Head Office</h2>
+            <p>
+                head office near prabhat chawk,<br> dist-Jalgaon pin-425001.
+            </p>
+        </div>
+        <div>
+            <h2>Contact Info</h2>
+            <p>
+                <b>+918334220307</b>
+            </p>
+            <p> technoweit@gmail.com</p>
+
+        </div>
+        <div>
+            <h2>Follow Us</h2>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com" title="Facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" title="Instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.whatsapp.com" title="WhatsApp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/feed/" title="Linkedin" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+</body>
+
+</html>
