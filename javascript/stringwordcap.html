@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "i am sorry. i am happy. i am gayatri"
+        let finres = " "
+        let sentence = str.split(".")
+        console.log(sentence);
+        for(let i=0; i<sentence.length;i++){
+            let words = sentence[i].split(" ")
+            let lstw = words[words.length-1]
+            let capw = lstw.replace(lstw.charAt(0),lstw.charAt(0).toUpperCase())
+            finres += sentence[i].replace(lstw,capw)
+        }
+        console.log(finres);
+    </script>
+</body>
+</html>

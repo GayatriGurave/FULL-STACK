@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [22,11,10,22,33,10,7,11]
+        let result={}
+        for(let i=0;i<arr.length;i++){
+            let num=arr[i]
+            if(result[num]){
+                result[num]+=1
+            }
+            else{
+                result[num]=1
+            }
+        }
+        console.log(result);
+    </script>
+</body>
+</html>
