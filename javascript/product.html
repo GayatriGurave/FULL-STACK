@@ -1,0 +1,43 @@
+<script>
+  const product = [
+    { name: "Smartphone", price: 35, category: "Mobile", brand: "Samsung" }, // Mobile
+    { name: "Laptop", price: 55, category: "Laptop", brand: "MI" }, // Laptop
+    { name: "Headphones", price: 18, category: "Accessories", brand: "Sony" },
+    { name: "Smartwatch", price: 25, category: "Accessories", brand: "Apple" },
+    { name: "Tablet", price: 20, category: "Mobile", brand: "Apple" }, // Mobile
+    { name: "Camera", price: 45, category: "Electronics", brand: "MI" },
+    { name: "Bluetooth Speaker", price: 15, category: "Accessories", brand: "JBL" },
+    { name: "Monitor", price: 40, category: "Electronics", brand: "MI" },
+    { name: "External Hard Drive", price: 30, category: "Accessories", brand: "Seagate" },
+    { name: "Smartphone", price: 15, category: "Mobile", brand: "Samsung" },
+    { name: "Smartphone", price: 30, category: "Mobile", brand: "OnePlus" }, // Mobile
+    { name: "Laptop", price: 40, category: "Laptop", brand: "HP" }, // Laptop
+    { name: "Smartphone", price: 23, category: "Mobile", brand: "Samsung" }, // Mobile
+    { name: "Laptop", price: 75, category: "Laptop", brand: "MI" }, // Laptop
+    { name: "Smartphone", price: 50, category: "Mobile", brand: "Samsung" }, // Mobile
+    { name: "Laptop", price: 85, category: "Laptop", brand: "Asus" }, // Laptop
+    { name: "Smartphone", price: 40, category: "Mobile", brand: "MI" }, // Mobile
+    { name: "Laptop", price: 65, category: "Laptop", brand: "Acer" }, // Laptop
+    { name: "Smartphone", price: 20, category: "Mobile", brand: "Motorola" }, // Mobile
+    { name: "Laptop", price: 50, category: "Laptop", brand: "Microsoft" } // Laptop
+];
+
+
+let prod1 = product.filter((prod)=>prod.price>15)
+console.table(prod1)
+
+let prod2 = product.filter((prod)=>prod.brand=="Samsung" && prod.price<25)
+console.table(prod2)
+
+let prod3 = product.some((prod)=>prod.brand=="MI")
+console.log(prod3)
+
+let prod4 = product.filter((prod)=>prod.name=="Laptop" && prod.price>60).slice(0,2)
+console.table(prod4)
+
+let prod5 = product.filter((prod)=>prod.category=="Mobile" || prod.brand=="Laptop")
+console.table(prod5)
+
+let prod6 = product.filter((prod)=>prod.name=="Laptop" && prod.price!=50)
+console.table(prod6)
+</script>

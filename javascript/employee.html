@@ -1,0 +1,49 @@
+<script>
+    // Array of 20 employees with Indian names, salary between 15k and 50k, and city
+const employees = [
+    { name: "Aarav", salary: 13, city: "jalgaon" ,department:"computer"},
+    { name: "Ishaan", salary: 45, city: "nashik" ,department:"sale"},
+    { name: "Aanya", salary: 20, city: "mumbai" ,department:"account"},
+    { name: "Ravi", salary: 15, city: "pachora" ,department:"sale"},
+    { name: "Neha", salary: 25, city: "jalgaon" ,department:"mathematics"},
+    { name: "Arjun", salary: 40, city: "Kolkata" ,department:"computer"},
+    { name: "Priya", salary: 28, city: "mumbai" ,department:"account"},
+    { name: "Saanvi", salary: 38, city: "Pune" ,department:"sale"},
+    { name: "Vivaan", salary: 50, city: "jalgaon" ,department:"computer"},
+    { name: "Kavya", salary: 22, city: "pachora" ,department:"chemestry"},
+    { name: "Aditya", salary: 32, city: "mumbai" ,department:"account"},
+    { name: "Maya", salary: 12, city: "jalgaon" ,department:"chemestry"},
+    { name: "Rohit", salary: 23, city: "mumbai" ,department:"sale"},
+    { name: "Shivani", salary: 14, city: "Noida" ,department:"computer"},
+    { name: "Vikas", salary: 11, city: "Indore" ,department:"mathematics"},
+    { name: "Tanvi", salary: 37, city: "nashik" ,department:"sale"},
+    { name: "Karan", salary: 41, city: "mumbai" ,department:"account"},
+    { name: "Shruti", salary: 13, city: "Vadodara" ,department:"computer"},
+    { name: "Manav", salary: 10, city: "Patna" ,department:"mathematics"},
+    { name: "Simran", salary: 34, city: "nashik" ,department:"sale"}
+];
+
+let emp1 = employees.filter((emp)=>emp.city=='jalgaon' && emp.salary>15)
+console.table(emp1)
+
+let emp2 = employees.filter((emp)=>emp.department=="sale" && emp.city=="nashik")
+console.table(emp2)
+
+let emp3 = employees.filter((emp)=>emp.city!="mumbai" && emp.department!="account")
+console.table(emp3)
+
+let emp4 = employees.every((emp)=>emp.salary>50)
+console.log(emp4);
+
+let emp5 = employees.some((emp)=>emp.city=="pachora")
+console.log(emp5);
+
+let emp6 = employees.filter((emp)=>emp.name.startsWith('A'))
+console.log(emp6);
+
+let emp7 = employees.filter((emp)=>emp.name.endsWith('i'))
+console.log(emp7);
+
+let emp8 = employees.filter((emp)=>emp.salary>=35 && emp.name.startsWith('K'))
+console.log(emp8);
+</script>

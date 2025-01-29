@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const students = 
+        [
+  { name: "Alice", grade: "Distinction", percent: 92 },
+  { name: "Bob", grade: "1st", percent: 85 },
+  { name: "Charlie", grade: "2nd", percent: 78 },
+  { name: "David", grade: "Distinction", percent: 95 },
+  { name: "Eva", grade: "3rd", percent: 60 },
+  { name: "Frank", grade: "Distinction", percent: 90 },
+  { name: "Grace", grade: "2nd", percent: 75 },
+  { name: "Hannah", grade: "1st", percent: 88 },
+  { name: "Ian", grade: "3rd", percent: 65 },
+  { name: "Jack", grade: "Distinction", percent: 93 },
+  { name: "Kathy", grade: "1st", percent: 82 },
+  { name: "Liam", grade: "2nd", percent: 79 },
+  { name: "Monica", grade: "Distinction", percent: 96 },
+  { name: "Nina", grade: "3rd", percent: 55 },
+  { name: "Oscar", grade: "Distinction", percent: 91 },
+  { name: "Paul", grade: "1st", percent: 87 },
+  { name: "Quinn", grade: "2nd", percent: 72 },
+  { name: "Rachel", grade: "3rd", percent: 64 },
+  { name: "Sam", grade: "Distinction", percent: 98 },
+  { name: "Tina", grade: "1st", percent: 80 },
+  { name: "Ursula", grade: "Fail", percent: 30 },
+  { name: "Victor", grade: "Fail", percent: 25 },
+  { name: "Wendy", grade: "Fail", percent: 28 },
+  { name: "Xander", grade: "Fail", percent: 18 },
+  { name: "Yara", grade: "Fail", percent: 12 }
+];
+let res1 = students.filter((std)=>std.percent<35)
+console.table(res1)
+console.log("below 35 are fail");
+let res2 = students.filter((std)=>std.percent>80 && std.percent<90)
+console.table(res2)
+let res3 = students.filter((std)=>std.percent>70 && std.percent<80)
+console.table(res3)
+let res4 = students.filter((std)=>std.percent>90)
+console.table(res4)
+    </script>
+</body>
+</html>
