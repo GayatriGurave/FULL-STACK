@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let names =["gayatri","toshnavi","jyoti","sudhir"]
+        names.push("kartik")
+        names.push("sam")
+        names.pop()
+        names.shift()
+        names.unshift("gayatri")
+          
+        console.log(names);
+        console.log(names.includes("jyoti"));
+        console.log(names.join(","));
+        console.log(names.join("--"));
+        console.log(names.join("##"));
+
+
+        const employees = [
+    { name: "Aarav", salary: 13, city: "jalgaon" ,department:"computer"},
+    { name: "Ishaan", salary: 45, city: "nashik" ,department:"sale"},
+    { name: "Aanya", salary: 20, city: "mumbai" ,department:"account"},
+    { name: "Ravi", salary: 15, city: "pachora" ,department:"sale"},
+    { name: "Neha", salary: 25, city: "jalgaon" ,department:"mathematics"},
+    { name: "Arjun", salary: 40, city: "Kolkata" ,department:"computer"},
+    { name: "Priya", salary: 28, city: "mumbai" ,department:"account"},
+    { name: "Saanvi", salary: 38, city: "Pune" ,department:"sale"},
+    { name: "Vivaan", salary: 50, city: "jalgaon" ,department:"computer"},
+    { name: "Kavya", salary: 22, city: "pachora" ,department:"chemestry"},
+    { name: "Aditya", salary: 32, city: "mumbai" ,department:"account"},
+    { name: "Maya", salary: 12, city: "jalgaon" ,department:"chemestry"}];
+
+    let res1 = employees.find((emp)=>emp.city=="jalgaon")
+    console.log(res1)  //find returns single object
+
+    let res2 = employees.filter((emp)=>emp.city=="jalgaon")
+    console.log(res2);   //filter returns array of object
+
+    //3.some   means someone(kahitri)
+    //4.every  means everyone(prateki)
+    </script>
+</body>
+</html>

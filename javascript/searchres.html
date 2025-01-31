@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let product=[
+         { id: 1, name: "Laptop", price: 999.99 },
+        { id: 2, name: "Smartphone", price: 699.99 },
+        { id: 3, name: "Headphones", price: 199.99 },
+        { id: 4, name: "Monitor", price: 349.99 },
+        { id: 5, name: "Keyboard", price: 49.99 },
+        { id: 6, name: "Mouse", price: 29.99 },
+        { id: 7, name: "Tablet", price: 499.99 },
+        { id: 8, name: "Smartwatch", price: 149.99 },
+        { id: 9, name: "Camera", price: 799.99 },
+        { id: 10, name: "Printer", price: 120.99 }];
+
+    function searchid(product,searchres){
+        return product.filter((p)=>serchres.includes(p.id))
+    }
+    let serchres = [2,5,8]
+    const res = searchid(product,searchres)
+    console.log(res);
+
+    </script>
+</body>
+</html>

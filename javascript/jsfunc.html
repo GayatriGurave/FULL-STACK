@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const products = [
+        { id: 1, name: "Laptop", price: 999.99 },
+        { id: 2, name: "Smartphone", price: 699.99 },
+        { id: 3, name: "Headphones", price: 199.99 },
+        { id: 4, name: "Monitor", price: 349.99 },
+        { id: 5, name: "Keyboard", price: 49.99 },
+        { id: 6, name: "Mouse", price: 29.99 },
+        { id: 7, name: "Tablet", price: 499.99 },
+        { id: 8, name: "Smartwatch", price: 149.99 },
+        { id: 9, name: "Camera", price: 799.99 },
+        { id: 10, name: "Printer", price: 120.99 },
+        { id: 11, name: "Speakers", price: 89.99 },
+        { id: 12, name: "Projector", price: 450.0 },
+        { id: 13, name: "External Hard Drive", price: 89.99 },
+        { id: 14, name: "Webcam", price: 59.99 },
+        { id: 15, name: "Microphone", price: 129.99 },
+        { id: 16, name: "Electric Kettle", price: 29.99 },
+        { id: 17, name: "Coffee Maker", price: 89.99 },
+        { id: 18, name: "Blender", price: 49.99 },
+        { id: 19, name: "Air Purifier", price: 150.0 },
+        { id: 20, name: "Toaster", price: 39.99 },
+      ];
+      let carditems = [];
+      function add(pid,qnty) {
+        if(qnty==0){
+          console.log("error");
+        }
+        else{
+          let item = products.find((p) => p.id == pid);
+        carditems.push(item);
+        item.qnty=qnty;
+        }
+        
+      }
+      add(3,2);
+      add(10,1);
+      add(15,0);
+      add(20,2);
+      
+      function remove(pid) {
+        carditems = carditems.filter((p) => p.id != pid);
+        
+    }
+      
+      // remove(3);
+      
+      // console.log("remove items: ",carditems);
+      function total() {
+        let sum = 0;
+        for (let i = 0; i < carditems.length; i++) {
+          sum += carditems[i].price*carditems[i].qnty;
+        }
+        return sum;
+      }
+      console.table(carditems)
+      let print = total();
+      console.log(print);
+      
+      // console.log(products);
+    </script>
+  </body>
+</html>
