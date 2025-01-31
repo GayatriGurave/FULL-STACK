@@ -1,0 +1,59 @@
+<script>
+   let order= [
+  {"customer_name": "John Doe", "customer_id": "C001", "date": "2023-11-05", "product_name": "Laptop", "quantity": 1, "amount": 1200},
+  {"customer_name": "Jane Smith", "customer_id": "C002", "date": "2023-11-12", "product_name": "Smartphone", "quantity": 2, "amount": 800},
+  {"customer_name": "Alice Johnson", "customer_id": "C003", "date": "2023-11-22", "product_name": "Headphones", "quantity": 3, "amount": 150},
+  {"customer_name": "Bob Lee", "customer_id": "C004", "date": "2023-12-03", "product_name": "Tablet", "quantity": 1, "amount": 400},
+  {"customer_name": "Emily Davis", "customer_id": "C005", "date": "2023-12-14", "product_name": "Smartwatch", "quantity": 1, "amount": 250},
+  {"customer_name": "Chris White", "customer_id": "C006", "date": "2023-12-21", "product_name": "Wireless Mouse", "quantity": 5, "amount": 125},
+  {"customer_name": "Tom Harris", "customer_id": "C007", "date": "2023-11-07", "product_name": "Keyboard", "quantity": 2, "amount": 80},
+  {"customer_name": "Sophia Clark", "customer_id": "C008", "date": "2023-12-17", "product_name": "Monitor", "quantity": 1, "amount": 300},
+  {"customer_name": "David Martinez", "customer_id": "C009", "date": "2023-12-10", "product_name": "Mousepad", "quantity": 3, "amount": 30},
+  {"customer_name": "Olivia Wilson", "customer_id": "C010", "date": "2023-12-27", "product_name": "Charger", "quantity": 2, "amount": 40},
+  {"customer_name": "James Brown", "customer_id": "C011", "date": "2023-11-06", "product_name": "Printer", "quantity": 1, "amount": 150.00},
+  {"customer_name": "Mia Taylor", "customer_id": "C012", "date": "2023-11-07", "product_name": "Webcam", "quantity": 2, "amount": 1000.00},
+  {"customer_name": "Liam Moore", "customer_id": "C013", "date": "2023-12-20", "product_name": "Desk Chair", "quantity": 1, "amount": 900.00},
+  {"customer_name": "Ella King", "customer_id": "C014", "date": "2023-12-01", "product_name": "Microphone", "quantity": 1, "amount": 75.00},
+  {"customer_name": "Sucas Lee", "customer_id": "C015", "date": "2023-12-17", "product_name": "External Hard Drive", "quantity": 1, "amount": 120.00},
+  {"customer_name": "Charlotte Harris", "customer_id": "C016", "date": "2023-12-08", "product_name": "Camera", "quantity": 1, "amount": 500.00},
+  {"customer_name": "Henry Clark", "customer_id": "C017", "date": "2023-12-12", "product_name": "Laptop Sleeve", "quantity": 3, "amount": 45.00},
+  {"customer_name": "Amelia Robinson", "customer_id": "C018", "date": "2023-12-17", "product_name": "Smartphone Case", "quantity": 5, "amount": 25.00},
+  {"customer_name": "Sack Walker", "customer_id": "C019", "date": "2023-12-10", "product_name": "Router", "quantity": 1, "amount": 70.00},
+  {"customer_name": "Chloe Green", "customer_id": "C020", "date": "2023-12-27", "product_name": "Smart Speaker", "quantity": 2, "amount": 150.00}
+
+]
+let ord1 = order.filter((ord)=>ord.amount>800)
+console.table(ord1);
+
+
+let ord2 = order.filter((ord)=>ord.date>="2023-11-15" && ord.date<="2023-12-20")
+console.table(ord2)
+
+let ord3 = order.some((ord)=>ord.date=="2023-12-27")
+console.log(ord3);
+
+
+let ord4 = order.filter((ord)=>ord.date=="2023-11-07" || ord.date=="2023-12-27")
+console.table(ord4)
+
+let startdate = new date("2023-11-01")
+let enddate = new date("2023-11-30")
+
+
+let ord5 = order.filter((ord)=>ord.date<"2023-11-01" || ord.date>"2023-11-30")
+console.table(ord5)
+
+let ord6 = order.filter((ord)=>ord.date>="2023-12-10" && ord.date<="2023-12-17" && ord.customer_name.startsWith('S'))
+console.table(ord6)
+
+let queryData = new Date("2023-11-23")
+let filterResult = order.filter((ord)=>(new Date(order.date).getDate() == queryData.getDate()) && (new Date(order.date).getMonth() == queryData.getMonth()))
+let filterResult1 = order.filter((order)=>new Date(order.date).getMonth()!=10)
+console.log("DATA" ,filterResult1);
+console.log("ORDERS",filterResult);
+
+let cDate = new Date();
+console.log(cDate.getDate());
+console.log(typeof(cDate.getDate()));
+
+</script>
