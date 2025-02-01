@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let BankSystem = {
+Name :"HDFC",
+Address : "Ganesh nagar, Lonkheda,tal-Shahada",
+Employees : [
+  { name: "John Doe", address: "123 Elm St", designation: "Branch Manager", salary: 75000, department: "Management" },
+  { name: "Alice Smith", address: "456 Oak St", designation: "Loan Officer", salary: 55000, department: "Loans" },
+  { name: "Bob Johnson", address: "789 Pine St", designation: "Cashier", salary: 40000, department: "Customer Service" },
+  { name: "Eve Adams", address: "321 Maple St", designation: "IT Support", salary: 65000, department: "IT" },
+  { name: "Charlie Brown", address: "654 Cedar St", designation: "Financial Analyst", salary: 60000, department: "Finance" },
+  { name: "John Doe", address: "123 Elm St, Springfield", designation: "Branch Manager", salary: 75000, department: "Management" },
+  { name: "Alice Smith", address: "456 Oak St, Springfield", designation: "Loan Officer", salary: 55000, department: "Loans" },
+  { name: "Bob Johnson", address: "789 Pine St, Springfield", designation: "Cashier", salary: 40000, department: "Customer Service" },
+  { name: "Eve Adams", address: "321 Maple St, Springfield", designation: "IT Support", salary: 65000, department: "IT" },
+  { name: "Charlie Brown", address: "654 Cedar St, Springfield", designation: "Financial Analyst", salary: 60000, department: "Finance" },
+      
+],
+    customers : [
+  { name: "Raj Kumar", address: "123 Main St, Delhi", adharNo: "1234 5678 9012", email: "raj@example.com", mobile: "9876543210", panNo: "ABCDE1234F", account:{ accNo: "1001", accBal: 15000, accType: "Savings" } },
+  { name: "Priya Sharma", address: "456 Park Ave, Mumbai", adharNo: "2345 6789 0123", email: "priya@example.com", mobile: "9876543211", panNo: "XYZAB2345C",account:{ accNo: "1002", accBal: 5000, accType: "Current" } },
+  { name: "Amit Verma", address: "789 High St, Bangalore", adharNo: "3456 7890 1234", email: "amit@example.com", mobile: "9876543212", panNo: "LMNOP3456D",account: { accNo: "1003", accBal: 20000, accType: "Savings" } },
+  { name: "Sita Gupta", address: "321 Low Rd, Kolkata", adharNo: "4567 8901 2345", email: "sita@example.com", mobile: "9876543213", panNo: "QWERT6789E",account:{ accNo: "1004", accBal: 3000, accType: "Current" } },
+  { name: "Sunil Patel", address: "654 Oak St, Chennai", adharNo: "5678 9012 3456", email: "sunil@example.com", mobile: "9876543214", panNo: "RTYUI1234J",account:{ accNo: "1005", accBal: 100000, accType: "Fixed Deposit" } },
+  { name: "Maya Singh", address: "123 Green St, Pune", adharNo: "6789 0123 4567", email: "maya@example.com", mobile: "9876543215", panNo: "ASDFG5678K",account:{ accNo: "1006", accBal: 75000, accType: "Savings" } },
+  { name: "Vikram Rao", address: "456 Blue Rd, Hyderabad", adharNo: "7890 1234 5678", email: "vikram@example.com", mobile: "9876543216", panNo: "ZXCVB2345L",account:{ accNo: "1007", accBal: 2500, accType: "Current" } },
+  { name: "Neha Joshi", address: "789 Yellow Ln, Jaipur", adharNo: "8901 2345 6789", email: "neha@example.com", mobile: "9876543217", panNo: "QWERT1234M",account: { accNo: "1008", accBal: 85000, accType: "Fixed Deposit" } },
+  { name: "Karan Mehta", address: "321 Red St, Ahmedabad", adharNo: "9012 3456 7890", email: "karan@example.com", mobile: "9876543218", panNo: "TYUIO5678N",account:{ accNo: "1009", accBal: 12000, accType: "Savings" } },
+  { name: "Rani Desai", address: "654 White Rd, Surat", adharNo: "0123 4567 8901", email: "rani@example.com", mobile: "9876543219", panNo: "ASDFG2345P",account:  { accNo: "1010", accBal: 45000, accType: "Current" } }
+],
+ 
+   checkBalance:(accNo)=>{
+
+  let customer = BankSystem.customers.find((cust) => cust.account.accNo === accNo);
+  
+//   if (!customer) {
+//     console.log("Account not found!");
+//     return;
+//   }
+
+  console.log(`Account Number: ${accNo}`);
+  console.log(`Account Balance: $${customer.account.accBal}`);
+},
+  
+  withDraw:(accNo,amount)=>{
+    let customer = BankSystem.customers.find((cust)=>cust.account.accNo===accNo);
+    if(customer.account.accBal<amount){
+        console.log(`Insufficient balance in ${accNo}`);
+    }
+    customer.account.accBal-=amount;
+    console.log(`the withdrawal rs is ${amount}`);
+    console.log(`Available balance in account ${accNo} is $${customer.account.accBal}`);
+  },
+  depositeBal:(accNo,amount)=>{
+    let customer = BankSystem.customers.find((cust)=>cust.account.accNo===accNo);
+    
+    customer.account.accBal+=amount;
+    console.log(`the deposite rs is ${amount}`);
+    console.log(`Available balance in account ${accNo} is $${customer.account.accBal}`);
+  },
+  transferBal:(faccNo,taccNo,amount)=>{
+    let fromCust = BankSystem.customers.find((cust)=>cust.account.accNo===faccNo);
+    let toCust = BankSystem.customers.find((cust)=>cust.account.accNo===taccNo);
+    let trans1 = fromCust.account.accBal-amount;
+    let trans2 = toCust.account.accBal+amount;
+    console.log(`available balance of account ${faccNo} is $${trans1}`);
+    console.log(`available balance of account ${taccNo} is $${trans2}`);
+  }    
+}
+
+BankSystem.checkBalance("1001")
+BankSystem.withDraw("1001",500)
+BankSystem.depositeBal("1001",1000)
+BankSystem.transferBal("1001","1002",500)
+// console.table(BankSystem.Employees)
+// console.table(BankSystem.customers)
+
+    </script>
+</body>
+</html>
