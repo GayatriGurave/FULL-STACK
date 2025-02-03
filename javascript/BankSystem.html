@@ -70,6 +70,7 @@ Employees : [
     let toCust = BankSystem.customers.find((cust)=>cust.account.accNo===taccNo);
     let trans1 = fromCust.account.accBal-amount;
     let trans2 = toCust.account.accBal+amount;
+    console.log(`transfer rs ${amount} from account ${faccNo} to account ${taccNo}`);
     console.log(`available balance of account ${faccNo} is $${trans1}`);
     console.log(`available balance of account ${taccNo} is $${trans2}`);
   }    
@@ -78,9 +79,8 @@ Employees : [
 BankSystem.checkBalance("1001")
 BankSystem.withDraw("1001",500)
 BankSystem.depositeBal("1001",1000)
-BankSystem.transferBal("1001","1002",500)
-// console.table(BankSystem.Employees)
-// console.table(BankSystem.customers)
+BankSystem.transferBal("1001","1002",1000)
+
 
     </script>
 </body>

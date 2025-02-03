@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        section{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+        }
+        .left{
+            height: 100vh;
+            width: 30%;
+            margin: 5%;
+            /* background-color: yellow; */
+        }
+        .left h2{
+            color: gray;
+            font-size: 80px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        .left h1{
+            color: white;
+            font-size: 150px;
+            width: 100%;
+        }
+        .left1{
+            line-height: 90px;
+            font-family:monospace;
+        }
+        input{
+            background-color:rgb(72, 72, 72);
+            height: 70px;
+            width: 500px;
+            padding: 70px;
+            border-radius: 100px;
+           
+        }
+        .left-2 {
+            display: flex;
+           gap: 50px;
+           margin: 5%;
+           position: absolute;
+           top: 40%;
+           color: white;
+        }
+        input::placeholder{
+            color: gray;
+            font-size: 50px;
+            
+        }
+        .left-3 input{
+        width:1200px ;
+        margin: 5%;
+        position: absolute;
+        left: 0;
+        top: 53%;
+        color: white;
+        }
+        .left-4 input{
+            width: 1200px;
+            margin: 5%;
+            position: absolute;
+            top: 66%;
+            left: 0;
+            color: white;
+        }
+        button{
+            width: 600px;
+            margin: 5%;
+            position: absolute;
+            top: 80%;
+            color: white;
+            background-color: orangered;
+            padding: 70px;
+            border-radius: 100px;
+            height: 180px;
+            padding: 50px;
+            font-size: 60px;
+            cursor: pointer;
+            
+        }
+        img{
+            height: 110%;
+            width: 100%;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+<form action="#" post="method">
+ <section>
+    <div class="left">
+    <h2>start for free</h2>
+    <div class="left1">
+        <h1>Create </h1>
+        <h1>Your account</h1>
+    </div>
+    <h2>Already a member? <span style="color: red;">Log in</span></h2>
+    </div>
+    <div class="left-2">
+        <div class="left-2a"><input type="text" placeholder="First name"></div>
+        <div class="left-2b"><input type="text" placeholder="Last name"></div>
+    </div>
+    <div class="left-3">
+        <input type="email" placeholder="E-mail">
+    </div>
+    <div class="left-4">
+        <input type="password" placeholder="Password">
+    </div>
+    <button>create account</button>
+    <div class="img">
+        <img src="./images/smilegirl.png" alt="">
+    </div>
+</section>
+</form>
+</body>
+</html>
