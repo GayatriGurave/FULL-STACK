@@ -35,18 +35,18 @@ Employees : [
   { name: "Karan Mehta", address: "321 Red St, Ahmedabad", adharNo: "9012 3456 7890", email: "karan@example.com", mobile: "9876543218", panNo: "TYUIO5678N",account:{ accNo: "1009", accBal: 12000, accType: "Savings" } },
   { name: "Rani Desai", address: "654 White Rd, Surat", adharNo: "0123 4567 8901", email: "rani@example.com", mobile: "9876543219", panNo: "ASDFG2345P",account:  { accNo: "1010", accBal: 45000, accType: "Current" } }
 ],
- 
-   checkBalance:(accNo)=>{
+    checkBalance:(accNo)=>{
 
   let customer = BankSystem.customers.find((cust) => cust.account.accNo === accNo);
   
-//   if (!customer) {
-//     console.log("Account not found!");
-//     return;
-//   }
+   if (!customer) {
+    console.log("Account not found!");
+     return;
+  }
 
   console.log(`Account Number: ${accNo}`);
-  console.log(`Account Balance: $${customer.account.accBal}`);
+
+    console.log(`Account Balance: $${customer.account.accBal}`);
 },
   
   withDraw:(accNo,amount)=>{
@@ -74,8 +74,9 @@ Employees : [
     console.log(`available balance of account ${faccNo} is $${trans1}`);
     console.log(`available balance of account ${taccNo} is $${trans2}`);
   }    
-}
 
+}
+        
 BankSystem.checkBalance("1001")
 BankSystem.withDraw("1001",500)
 BankSystem.depositeBal("1001",1000)
