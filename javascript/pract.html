@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const user = {
+            id: 1,
+            name: "Leanne Graham",
+            username: "Bret",
+            email: "Sincere@april.biz",
+            address: {
+                street: "Kulas Light",
+                suite: "Apt. 556",
+                city: "Gwenborough",
+                zipcode: "92998-3874",
+                geo: {
+                    lat: "-37.3159",
+                    lng: "81.1496",
+                },
+            },
+            phone: "1-770-736-8031 x56442",
+            website: "hildegard.org",
+            company: {
+                name: "Romaguera-Crona",
+                catchPhrase: "Multi-layered client-server neural-net",
+                bs: "harness real-time e-markets",
+            },
+        }
+        console.log(user.email);
+        console.log(user.address);
+        console.log(user.address.city);
+        console.log(user.address.geo.lat);
+        console.log(user.company.name);
+        
+        let data = {
+            Sophia: {
+                id: 33,
+                study: [
+                    {
+                        primary: [
+                            { school_name: "ABC primary school" },
+                            { location: "Peters burg" },
+                        ],
+                    },
+                    {
+                        secondary: [
+                            { school_name: "ABC secondary school" },
+
+                            { location: "St Lorence" },
+                        ],
+                    },
+                ],
+            },
+        };
+        console.log(data.Sophia.study[1].secondary[1].location);
+
+        let activities = {
+            activity1: [
+                {
+                    name: "listen on spotify",
+                    song_list: {
+                        song_1: "abc",
+                        song_2: "bcd",
+                    },
+                    id: 1,
+                },
+                {
+                    name: "listen music through bot",
+
+                    song_list: {
+                        song_1: "wxy",
+                        song_2: "xyz",
+                    },
+                    id: 2,
+                },
+            ],
+        };
+        console.log(activities.activity1[0].song_list.song_1);
+        console.log(activities.activity1[1].song_list.song_2);
+
+        let students = {
+            2222: {
+                name: "Jack",
+                section: "C",
+                class: "IX",
+                address: {
+                    "building no": 12,
+                    street: "St. Jonson",
+                    city: "Petersburg",
+                    country: "UK",
+                },
+            },
+            3333: {
+                name: "Herry",
+                section: "D",
+                class: "X",
+                address: {
+                    "building no": 85,
+                    street: "DC road",
+                    city: "Kachukhet",
+                    country: "Bangladesh",
+                },
+            },
+        };
+        console.log(students[2222].address.city);
+        console.log(students[3333].name);
+        
+        let instructor = {
+            name: "Jhankar Mahbub",
+            entrepreneur: true,
+            additionalData: {
+                writer: true,
+                favoriteHobbies: ["travelling", "Coding"],
+                books: ["programming er bolod to bos", "programming er coddogosti"],
+                moreDetails: {
+                    favoriteBasketballTeam: "XYZ",
+                    isYoungest: true,
+                    hometown: {
+                        city: "ABC",
+                        state: "VW",
+                    },
+                    countriesLivedIn: ["Bangladesh", "New York"],
+                },
+            },
+        };
+        console.log(instructor.additionalData.books[1]);
+        console.log(instructor.additionalData.moreDetails.hometown.state);
+        console.log(instructor.additionalData.moreDetails.countriesLivedIn[0]);
+        
+        let books = [100,150,600,250,430,120,180,200]
+       
+        let bookPrice = books.filter((p)=>p<=200);
+        console.log(bookPrice);
+    //    for (const book of books) {
+    //     if(book>200){
+    //         continue;
+    //     }
+    //     console.log(book);
+    //    }
+
+    //    function odd_even(a){
+    //     if(a%2==0){
+    //         console.log("even");
+    //     }
+    //     else{
+    //         console.log("odd");
+    //     }
+    //    }
+    function odd_even(a){
+        if(a%2==0){
+           return "even";
+        }
+        else{
+            return "odd";
+        }
+       }
+   
+       let signal = prompt("Enter the color: ")
+       if(signal==="red"){
+        console.log("Stop! you can't cross the road");
+       }
+       else if(signal==="yellow"){
+        console.log("you should stop..");
+       }
+       else{
+        console.log("you should cross the road");
+       }
+
+       function leapYear(a){
+        if((a%4===0 && a%100!==0) || (a%400===0)){
+            console.log(`${a} is leap year`);
+        }
+        else{
+            console.log(`${a} not a leap year`);
+        }
+       }
+    </script>
+</body>
+
+</html>
