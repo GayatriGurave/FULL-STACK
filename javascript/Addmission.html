@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let stuData = {}
+        let studList = []
+        //1 admission form filling
+        function fillForm(stuName,stuMob,stuCourse,nextStep){
+            console.log("Form filling started");
+            setTimeout(() => {
+                stuData = {stuName,stuMob,stuCourse}
+                console.log("form filling completed");
+                nextStep(stuData)
+            }, 2000);
+        }
+        //2 document varification
+        function varifyDocs(stuInfo,documentList,nextStep){
+            console.log("varification started");
+            setTimeout(() => {
+                stuInfo.document = documentList
+                console.log("varification completed");
+                nextStep(stuInfo)
+            }, 2000);
+        }
+        //3 challan generation
+        function printChallan(chllanNo,amount,sInfo,nextStep){
+            console.log("printing started");
+            setTimeout(() => {
+                sInfo.addmissionFees = amount
+                sInfo.challNo = chllanNo
+                console.log("printing completed");
+                nextStep(sInfo)
+            }, 2000);
+            
+        }
+        //4 make payment
+        function makePayment(sInfo,bankName,nextStep){
+            console.log("payment processing..");
+            setTimeout(() => {
+                sInfo.bankName = bankName
+                console.log("payment completed");
+                nextStep(sInfo)
+            }, 2000);
+        }
+        //5 form submission
+        function submitForm(studentData,nextStep){
+            setTimeout(() => {
+                console.log("form submission done");
+                nextStep(studentData)
+            }, 2000);
+        }
+
+        fillForm("Gayatri",9265872487,"MSC",(sData)=>{
+            console.log("Data",sData);
+            varifyDocs(sData,["Aadhar card","Nationallity","Cast Validity"],(s2Data)=>{
+                console.log("Data2",s2Data);
+                printChallan(123,4324,s2Data,(s3Data)=>{
+                    makePayment(s3Data,"SBI",(s4Data)=>{
+                        console.log(s3Data);
+                        submitForm(s4Data,()=>{
+                            console.log("All Done");
+                            console.log("All Data",s4Data);
+                            console.log(s4Data);
+                            studList.push(s4Data)
+                        
+                            console.log(studList);
+                        })
+                    })
+                })
+            })
+        })
+        
+    </script>
+</body>
+</html>

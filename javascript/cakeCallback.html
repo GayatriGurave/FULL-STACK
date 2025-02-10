@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cakeData={}
+        let cakeList=[]
+        function collectIngrediets(flour,sugar,milk,nextStep){
+            setTimeout(() => {
+                cakeData={flour,sugar,milk}
+                console.log("Ingridients collected");
+                nextStep(cakeData)
+            }, 2000);
+        }
+        function batterPreparation(measurements,documentList,nextStep){
+            setTimeout(() => {
+              
+                measurements.measurement = documentList
+                console.log("batter prepared");
+                nextStep(measurements)
+            }, 2000);
+        }
+        function chooseShape(cakeinfo,shapeList,nextStep){
+            setTimeout(() => {
+                //cakeinfo.circle=circle
+                cakeinfo.shape=shapeList;
+                console.log("shape choosed");
+                nextStep(cakeinfo)
+            }, 2000);
+        }
+        function startBaking(min,cakeinfo,nextStep){
+            setTimeout(() => {
+                cakeinfo.min = min
+                //cakeinfo.celsius = celsius
+                console.log("Baking started");
+                nextStep(cakeinfo)
+            }, 2000);
+        }
+        function decorateCake(chocklate,cakeinfo,nextStep){
+            setTimeout(() => {
+                //cakeinfo.nuts=nuts
+                cakeinfo.chocklate=chocklate
+                console.log("Cake decorated");
+                nextStep(cakeinfo)
+            }, 2000);
+        }
+        function cakeCutting(nextStep){
+            setTimeout(() => {
+                console.log("Cake cutting using knife");
+            }, 2000);
+        }
+
+        collectIngrediets("Maida","Sugar","Milk",(cData)=>{
+            console.log("Data",cData);
+            batterPreparation(cData,["2cup floor","1cup sugar","1cup milk"],(c2Data)=>{
+                console.log("Measurements for batter Preparation",c2Data);
+                chooseShape(c2Data,["Circle","Heart","Square"],(c3Data)=>{
+                console.log(c3Data);
+                    startBaking(c3Data,"30min",(c4Data)=>{
+                        console.log("Bake cake maximum",c4Data);
+                        decorateCake(c4Data,"Nuts,Chocklate,Cherry ",(c5Data)=>{
+                            console.log("Decorate Cake Using",c5Data);
+                            cakeCutting()
+                        })
+                    })
+                })
+            })
+        })
+        
+        </script>
+</body>
+</html>

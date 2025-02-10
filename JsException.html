@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Java script Exception handling
+        //1.divisible by zero   
+        let divide = ((a,b)=>{
+            if(b==0){
+                throw new Error("not divisible by 0");
+                
+            }
+            return a/b 
+        })
+
+        // divide(10,5)
+
+        try {
+            console.log(divide(10,0));
+        } catch (error) {
+            console.log(error);
+        }finally{
+            console.log("Done");
+        }
+      //2 age checking
+      let checkAge = ((a)=>{
+        if(a<18){
+            throw new Error("you can't vote")
+        }
+        return "you can vote"
+      })  
+      try {
+        console.log(checkAge(19));
+      } catch (error) {
+        console.log(error);
+      }finally{
+        console.log("Done");
+      }
+    </script>
+</body>
+</html>
