@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+         let arr = [12,2,6,4,5,9]
+
+         let mult = arr.map((val)=>{
+            return val*2
+         })
+         console.log(mult);
+
+         let avg = arr.filter((val)=>{
+           return val%2==0
+         })
+         console.log(avg);
+
+         let sum = arr.reduce((val1,val2)=>{
+            return val1+val2
+         })
+         console.log(sum);
+     </script>
+</body>
+</html>

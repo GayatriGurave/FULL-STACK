@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let stuData = {}
+        let studList = []
+
+        function fillForm(stuName,stuMob,stuCourse){
+            console.log("Form filling started");
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    stuData={stuName,stuMob,stuCourse}
+                    resolve(stuData)
+                    reject(new Error("Enter proper informaton"))
+                    console.log("Form filling completed");
+                }, 2000);
+            })
+        }
+        function varifyDocs(stuInfo,documentList){
+            console.log("varification started");
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                stuInfo.document = documentList
+                resolve(stuInfo)
+                console.log("varification completed");
+        
+            }, 2000);
+            })
+        }
+        function printChallan(chllanNo,amount,sInfo){
+            console.log("printing started");
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                sInfo.addmissionFees = amount
+                sInfo.challNo = chllanNo
+                console.log("printing completed");
+                resolve(sInfo)
+                reject(new Error("Missing.."))
+            }, 2000);
+            })
+        }
+        function makePayment(sInfo,bankName){
+            console.log("payment processing..");
+           return new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                sInfo.bankName = bankName
+                console.log("payment completed");
+                resolve(sInfo)
+            }, 2000);
+           })
+        
+        }
+        function submitForm(studentData){
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                console.log("form submission done");
+                resolve(studentData)
+            }, 2000);
+            })
+        }
+        fillForm("Gayatri",7020013540,"MSC")
+        .then((result)=>{
+            console.log(result);
+            varifyDocs(result,["cast","nationality","Aadhar card"])
+            .then((result2)=>{
+                console.log(result2);
+                printChallan(123,19500,result2)
+                .then((result3)=>{
+                    console.log(result3);
+                    makePayment(result3,"SBI")
+                    .then((result4)=>{
+                        console.log(result4);
+                        submitForm(result4)
+                        studList.push(result4)
+                        console.log(studList);
+                    })
+                })
+            })
+        }).catch((error)=>console.log(error))
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .box {
+            height: 70%;
+            width: 30%;
+            left: 3%;
+            top: 14%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10.5px);
+            -webkit-backdrop-filter: blur(10.5px);
+            position: absolute;
+
+
+        }
+
+        .box1 {
+            height: 500px;
+            width: 500px;
+            background-color: purple;
+            border-radius: 50%;
+            margin-top: 3%;
+        }
+
+        .box2 {
+            height: 500px;
+            width: 500px;
+            background-color: orangered;
+            border-radius: 50%;
+            margin-left: 28%;
+            margin-top: 20%;
+        }
+
+        .box h1 {
+            color: white;
+            font-size: 100px;
+            margin: 100px;
+        }
+
+        .box p {
+            color: white;
+            font-size: 70px;
+            margin: 100px;
+            line-height: 1px;
+        }
+
+        .box label {
+            color: white;
+            margin: 100px;
+            font-size: 70px;
+        }
+
+        input {
+            height: 130px;
+            width: 80%;
+            position: absolute;
+            top: 32%;
+            left: 6%;
+            color: white;
+            background-color: rgb(55, 53, 53);
+            font-size: 50px;
+
+        }
+
+        input::placeholder {
+            color: white;
+            font-size: 50px;
+            padding: 30px;
+
+            /* text-align: left; */
+        }
+
+        .l2 input {
+
+            height: 130px;
+            width: 80%;
+            position: absolute;
+            top: 55%;
+            left: 6%;
+            color: white;
+            background-color: rgb(55, 53, 53);
+
+        }
+
+        .l2 {
+            margin-top: 20%;
+        }
+
+        button {
+            height: 150px;
+            width: 80%;
+            margin-top: 25%;
+            margin-left: 6%;
+            font-size: 50px;
+        }
+        .right{
+            color: white;
+            text-align: right;
+        }
+        .right h1{
+            position: absolute;
+            right: 0;
+            font-size: 150px;
+            font-family:monospace;
+            bottom: 60%;
+        }
+        .right h2{
+            position: absolute;
+            right: 0;
+            font-size: 300px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            bottom: 40%;
+        }
+        .box3{
+            height: 200px;
+            width: 30%;
+            background-color: #fff;
+            position: absolute;
+            right: 0;
+            bottom: 35%;
+            
+        }
+        .box3 h1{
+            font-size: 150px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            padding-left: 80px;
+            line-height: 5px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="box">
+        <h1>Welcome Back!</h1>
+        <p>Login to your account</p>
+        <label for="inp">Username</label>
+        <input type="text" placeholder="For CodingArtist">
+        <div class="l2">
+            <label for="inp1">Password</label>
+            <input type="text" placeholder="Minimum 6 characters">
+        </div>
+        <button>Sign in</button>
+    </div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="right">
+        <h1>CSS TUTORIAL</h1>
+        <h2>GLASSMORPHISM</h2>
+    </div>
+    <div class="box3">
+        <h1>LOGIN FORM UI</h1>
+    </div>
+</body>
+
+</html>

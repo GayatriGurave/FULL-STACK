@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        bankLoan = {}
+        //    function applyLoan(loanAmt,loanType,tenure){
+        //     return new Promise((resolve,reject)=>{
+        //         console.log("Apply Loan");
+        //         setTimeout(() => {
+        //             resolve(`The loan amount  $${loanAmt} for loan type ${loanType} tenure for ${tenure} months has received`)
+        //         }, 2000);
+        //     })
+        //    }
+        function applyLoan(loanAmt, loanType, tenure) {
+            return new Promise((resolve, reject) => {
+                console.log("Apply Loan");
+                bankLoan.loanAmt = loanAmt
+                bankLoan.loanType = loanType
+                bankLoan.tenure = tenure
+                setTimeout(() => {
+                    resolve(bankLoan)
+                }, 2000);
+            })
+        }
+        function collectInfo(name, age, email) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    // if(!age||!name||!email){
+                    //     reject("invalid input")
+                    // }
+                    bankLoan.name = name
+                    bankLoan.age = age
+                    bankLoan.email = email
+                    resolve(bankLoan)
+                    // resolve(`The name  is ${name} Age is ${age} email ID is ${email}`)
+                }, 2000);
+            })
+        }
+        function createFile(filename) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    bankLoan.filename = filename
+                    resolve(`the file ${filename} successfully created`);
+                }, 2000);
+            })
+
+        }
+        function checkingFile(loan) {
+            console.log("file Checking Started..");
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(bankLoan);
+                    console.log("File checking completed");
+                }, 2000);
+            })
+
+        }
+        function approveLoan(creditScore) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    bankLoan.creditScore = creditScore
+                    if (creditScore < 600) {
+                        reject("Poor creditScore")
+                    }
+                    resolve(bankLoan)
+
+                }, 2000);
+            })
+        }
+        function transferLoan(accountNo, amount) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(`Transfer successfully: $${amount} sent to account ${accountNo}`);
+                }, 2000);
+            })
+        }
+
+        applyLoan(100000, "Personal", 12)
+            .then((result) => {
+                console.log("1 :", result);
+                collectInfo("Gayatri Gurave", 23, "guravegayatri@gmail.com")
+                    .then((result1) => {
+                        console.log("2 :", result1);
+                        createFile("ApplicantInfo")
+                            .then((result2) => {
+                                console.log(result2);
+                                checkingFile()
+                                    .then((result5) => {
+                                        console.log(result5);
+                                        approveLoan(700)
+                                            .then((result3) => {
+                                                console.log(result3);
+                                                transferLoan(1001, 5000)
+                                                    .then((result4) => {
+                                                        console.log(result4);
+                                                    })
+
+
+                                            })
+                                    })
+                            })
+                    })
+            }).catch((error) => {
+                console.log(error);
+            })
+    </script>
+</body>
+
+</html>
