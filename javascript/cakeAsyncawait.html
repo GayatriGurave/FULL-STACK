@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let cakeData = {}
+        let cakeList = []
+        function collectIngrediets(ingredients) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    cakeData.ingredints = ingredients
+                    console.log("Ingridients collected");
+                    resolve(cakeData)
+                }, 2000);
+            })
+        }
+        function batterPreparation(cake, floorweight) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+
+                    cake.weight = floorweight
+                    console.log("batter prepared");
+                    resolve(cake)
+                }, 2000);
+            })
+        }
+        function chooseShape(cakeinfo, shape) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    //cakeinfo.circle=circle
+                    cakeinfo.shape = shape;
+                    console.log("shape choosed");
+                    resolve(cakeinfo)
+                    reject(new Error("Choose shape"))
+                }, 2000);
+            })
+        }
+        function startBaking(min,cakeinfo){
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                cakeinfo.min = min
+                //cakeinfo.celsius = celsius
+                console.log("Baking started");
+                resolve(cakeinfo)
+            }, 2000);
+            })
+        }
+        let startProcess = async()=>{
+            let ingredients = await collectIngrediets(["Maida","Sugar","Milk"])
+            console.log("1",ingredients);
+
+            let info = await batterPreparation(500+"gm flourweight")
+            console.log("2",info);
+
+            let shape = await chooseShape("Heart")
+            console.log(shape);
+
+            let Baking = await startBaking(30)
+            console.log(Baking);
+    }
+    startProcess()
+        // collectIngrediets(["Maida", "Sugar", "Milk"])
+        //     .then((result) => {
+        //         console.log("1", result);
+        //         batterPreparation(result, "1kg")
+        //             .then((result1) => {
+        //                 console.log("2", result1);
+        //                 chooseShape(result1, "Square")
+        //                     .then((result2) => {
+        //                         console.log("3", result2);
+        //                         startBaking("30Min",result2)
+        //                         .then((result3)=>{
+        //                             console.log("4",result3);
+        //                         })
+        //                     })
+        //             })
+        //     }).catch((error) => {
+        //         console.log(error);
+        //     })
+    </script>
+</body>
+
+</html>

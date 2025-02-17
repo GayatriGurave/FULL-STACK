@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function applyForLoan(user) {
+            return new Promise((resolve, reject) => {
+                console.log("1. Loan application received for", user.name);
+                setTimeout(() => resolve(user), 1000);
+            });
+        }
+
+        function verifyDocuments(user) {
+            return new Promise((resolve, reject) => {
+                console.log("2. Verifying documents...");
+                setTimeout(() => {
+                    if (user.documentsVerified) {
+                        console.log("   Documents verified.");
+                        resolve(user);
+                    } else {
+                        reject("   Document verification failed.");
+                    }
+                }, 1000);
+            });
+        }
+
+        function checkCreditScore(user) {
+            return new Promise((resolve, reject) => {
+                console.log("3. Checking credit score...");
+                setTimeout(() => {
+                    console.log("   Credit Score:", user.creditScore);
+                    if (user.creditScore > 600) {
+                        resolve(user);
+                    } else {
+                        reject("   Loan rejected due to low credit score.");
+                    }
+                }, 1000);
+            });
+        }
+
+        function approveLoan(user) {
+            return new Promise((resolve) => {
+                console.log("4. Approving loan...");
+                setTimeout(() => {
+                    console.log("   Loan Approved!");
+                    resolve(user);
+                }, 1000);
+            });
+        }
+
+        function disburseFunds(user) {
+            return new Promise((resolve) => {
+                console.log("5. Disbursing funds...");
+                setTimeout(() => {
+                    console.log("   Funds disbursed successfully!");
+                    resolve("Loan process completed.");
+                }, 1000);
+            });
+        }
+
+        // Running the Loan Process
+        const user = { name: "Ashish", creditScore: 700, documentsVerified: true };
+
+        applyForLoan(user)
+            // .then((result) => verifyDocuments(result))
+            .then(applyForLoan)
+            // .then((result2) => checkCreditScore(result2))
+            .then(verifyDocuments)
+            .then(approveLoan)
+            .then(disburseFunds)
+            .then((message) => console.log(message))
+            .catch((error) => console.error("Error:", error));
+            console.log(user);
+
+    </script>
+</body>
+</html>

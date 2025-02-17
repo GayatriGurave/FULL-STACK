@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        bankLoan = {}
+        //    function applyLoan(loanAmt,loanType,tenure){
+        //     return new Promise((resolve,reject)=>{
+        //         console.log("Apply Loan");
+        //         setTimeout(() => {
+        //             resolve(`The loan amount  $${loanAmt} for loan type ${loanType} tenure for ${tenure} months has received`)
+        //         }, 2000);
+        //     })
+        //    }
+        function applyLoan(loanAmt, loanType, tenure) {
+            return new Promise((resolve, reject) => {
+                console.log("Apply Loan");
+                bankLoan.loanAmt = loanAmt
+                bankLoan.loanType = loanType
+                bankLoan.tenure = tenure
+                setTimeout(() => {
+                    resolve(bankLoan)
+                }, 2000);
+            })
+        }
+        function collectInfo(name, age, email) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    // if(!age||!name||!email){
+                    //     reject("invalid input")
+                    // }
+                    bankLoan.name = name
+                    bankLoan.age = age
+                    bankLoan.email = email
+                    resolve(bankLoan)
+                    // resolve(`The name  is ${name} Age is ${age} email ID is ${email}`)
+                }, 2000);
+            })
+        }
+        function createFile(filename) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    bankLoan.filename = filename
+                    resolve(`the file ${filename} successfully created`);
+                }, 2000);
+            })
+
+        }
+        function checkingFile(loan) {
+            console.log("file Checking Started..");
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(bankLoan);
+                    console.log("File checking completed");
+                }, 2000);
+            })
+
+        }
+        function approveLoan(creditScore)
+         {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => 
+                {
+                    console.log(bankLoan.creditScore = creditScore);
+                    
+                    if (creditScore < 600) {
+                        reject("Poor creditScore")
+                    }
+                    resolve(bankLoan)
+
+                }, 2000);
+            })
+        }
+        function transferLoan(accountNo, amount) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(`Transfer successfully: $${amount} sent to account ${accountNo}`);
+                }, 2000);
+            })
+        }
+
+        let processLoan=async()=>{
+            try {
+                let loanResult = await applyLoan(100000, "Personal", 12);
+                console.log("1 :", loanResult);
+
+                let infoResult = await collectInfo("Gayatri Gurave", 23, "guravegayatri@gmail.com");
+                console.log("2 :", infoResult);
+
+                let fileResult = await createFile("ApplicantInfo");
+                console.log(fileResult);
+
+                let checkingResult = await checkingFile();
+                console.log(checkingResult);
+
+                let approvalResult = await approveLoan(700);
+                console.log(approvalResult);
+
+                let transferResult = await transferLoan(1001, 5000);
+                console.log(transferResult);
+
+            } catch (error) {
+                console.log("Error:", error);
+            }
+        }
+
+        // Start the loan process
+        processLoan();
+        
+        
+    </script>
+</body>
+
+</html>

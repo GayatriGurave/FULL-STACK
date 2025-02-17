@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="registerUser(event)">
+        <input type="text" placeholder="Enter Name" name="userName" id="iuserName">
+        <input type="password" placeholder="Enter Password" name="userPassword" id="iuserPassword">
+        <input type="number" placeholder="Enter No" name="userMobileNo" id="imobileNo">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="data"></p>
+    <script>
+
+        let usersData = []
+        //handle forms using javascript
+        function registerUser(formEvent) {
+        
+            formEvent.preventDefault()
+            let formData = new FormData(formEvent.target)
+            let formEntries = Object.fromEntries(formData.entries())
+            console.log(formEntries);
+
+            usersData.push(formEntries)
+            let pData = document.getElementById("data")
+            pData.innerText = "name: "+formEntries.userName +"\n Password: "+formEntries.userPassword+"\n Mobile no: "+formEntries.userMobileNo
+
+            document.getElementById("iuserName").value = ""
+            document.getElementById("iuserPassword").value = ""
+            document.getElementById("imobileNo").value=""
+        }
+    </script>
+    
+</body>
+</html>
