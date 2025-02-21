@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <select onchange="filterStudantsByYear(event)" name="academicYear" id="academicYear">
+        <option value="FY">FY</option>
+        <option value="SY">SY</option>
+        <option value="TY">TY</option>
+    </select>
+    <table id="tblStudent" border="10px">
+        <tr>
+            <td>Roll No</td>
+            <td>Name</td>
+            <td>Course</td>
+            <td>Year</td>
+            <td>Email</td>
+        </tr>
+    </table>
+
+    <script>
+        const students = [
+            { name: "Alice Johnson", course: "Computer Science", year: "FY", email: "alice@example.com" },
+            { name: "Bob Smith", course: "Mechanical Engineering", year: "SY", email: "bob@example.com" },
+            { name: "Charlie Brown", course: "Electrical Engineering", year: "TY", email: "charlie@example.com" },
+            { name: "David Wilson", course: "Civil Engineering", year: "FY", email: "david@example.com" },
+            { name: "Emma Davis", course: "Information Technology", year: "SY", email: "emma@example.com" },
+            { name: "Frank Harris", course: "Electronics", year: "TY", email: "frank@example.com" },
+            { name: "Grace Martin", course: "Business Administration", year: "FY", email: "grace@example.com" },
+            { name: "Henry Lewis", course: "Pharmacy", year: "SY", email: "henry@example.com" },
+            { name: "Ivy Walker", course: "Computer Science", year: "TY", email: "ivy@example.com" },
+            { name: "Jack Hall", course: "Mechanical Engineering", year: "FY", email: "jack@example.com" },
+            { name: "Kate Allen", course: "Electrical Engineering", year: "SY", email: "kate@example.com" },
+            { name: "Liam Young", course: "Civil Engineering", year: "TY", email: "liam@example.com" },
+            { name: "Mia Scott", course: "Information Technology", year: "FY", email: "mia@example.com" },
+            { name: "Noah Green", course: "Electronics", year: "SY", email: "noah@example.com" },
+            { name: "Olivia Adams", course: "Business Administration", year: "TY", email: "olivia@example.com" },
+            { name: "Paul Baker", course: "Pharmacy", year: "FY", email: "paul@example.com" },
+            { name: "Quinn Carter", course: "Computer Science", year: "SY", email: "quinn@example.com" },
+            { name: "Rachel Foster", course: "Mechanical Engineering", year: "TY", email: "rachel@example.com" },
+            { name: "Samuel Parker", course: "Electrical Engineering", year: "FY", email: "samuel@example.com" },
+            { name: "Tina Murphy", course: "Civil Engineering", year: "SY", email: "tina@example.com" },
+            { name: "Umar Edwards", course: "Information Technology", year: "TY", email: "umar@example.com" },
+            { name: "Victor Collins", course: "Electronics", year: "FY", email: "victor@example.com" },
+            { name: "Wendy Turner", course: "Business Administration", year: "SY", email: "wendy@example.com" },
+            { name: "Xavier Reed", course: "Pharmacy", year: "TY", email: "xavier@example.com" },
+            { name: "Yasmine Bell", course: "Computer Science", year: "FY", email: "yasmine@example.com" },
+            { name: "Zachary Ward", course: "Mechanical Engineering", year: "SY", email: "zachary@example.com" },
+            { name: "Amy Clark", course: "Electrical Engineering", year: "TY", email: "amy@example.com" },
+            { name: "Brian White", course: "Civil Engineering", year: "FY", email: "brian@example.com" },
+            { name: "Chloe Nelson", course: "Information Technology", year: "SY", email: "chloe@example.com" },
+            { name: "Daniel Moore", course: "Electronics", year: "TY", email: "daniel@example.com" },
+            { name: "Ella Robinson", course: "Business Administration", year: "FY", email: "ella@example.com" },
+            { name: "Felix Gonzalez", course: "Pharmacy", year: "SY", email: "felix@example.com" },
+            { name: "Georgia Carter", course: "Computer Science", year: "TY", email: "georgia@example.com" },
+            { name: "Harold King", course: "Mechanical Engineering", year: "FY", email: "harold@example.com" },
+            { name: "Irene Barnes", course: "Electrical Engineering", year: "SY", email: "irene@example.com" },
+            { name: "James Wright", course: "Civil Engineering", year: "TY", email: "james@example.com" },
+            { name: "Kelly Ramirez", course: "Information Technology", year: "FY", email: "kelly@example.com" },
+            { name: "Leo Campbell", course: "Electronics", year: "SY", email: "leo@example.com" },
+            { name: "Megan Mitchell", course: "Business Administration", year: "TY", email: "megan@example.com" }
+        ];
+        let tblStudent = document.getElementById("tblStudent")
+
+
+
+        function filterStudantsByYear(e) {
+            let selectedYear = e.target.value
+            let filteredStudData = students.filter((stud) => stud.year == selectedYear)
+            console.log(filteredStudData);
+            tblStudent.innerHTML = ""
+                filteredStudData.map((stud, index) => {
+                let trStud = document.createElement("tr")
+
+                trStud.innerHTML = `  
+            <td>${index + 1}</td>
+            <td>${stud.name}</td>
+                <td>${stud.course}</td>
+                <td>${stud.year}</td>
+                <td>${stud.email}</td>`
+
+                if (index % 2 == 0) {
+                    trStud.style.backgroundColor = "red"
+                } else {
+                    // trStud.style.backgroundColor = "green"
+                }
+
+                tblStudent.appendChild(trStud)
+                
+            })
+        }
+
+        students.map((stud, index) => {
+            let trStud = document.createElement("tr")
+
+            trStud.innerHTML = `  
+            <td>${index + 1}</td>
+            <td>${stud.name}</td>
+                <td>${stud.course}</td>
+                <td>${stud.year}</td>
+                <td>${stud.email}</td>`
+
+            if (index % 2 == 0) {
+                trStud.style.backgroundColor = "red"
+            } else {
+                // trStud.style.backgroundColor = "green"
+            }
+            tblStudent.appendChild(trStud)
+        })
+    </script>
+</body>
+
+</html>

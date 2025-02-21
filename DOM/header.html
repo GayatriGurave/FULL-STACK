@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+        }
+        p {
+            font-size: 30px;
+            /* color: red; */
+            text-align: justify;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //create header
+        let head = document.createElement("header")
+        head.style.height="100px"
+        head.style.width="100%"
+        head.style.backgroundColor="cyan"
+        document.body.appendChild(head)
+
+        //create ul
+        let ul = document.createElement("ul")
+        let li =document.createElement("li")
+        head.appendChild(ul)
+        ul.appendChild(li)
+        li.innerText="Home"
+        li.innerText="About"
+        li.innerText="Contact"
+        head.style.display="flex"
+        head.style.gap="50px"
+
+        let section = document.createElement("section")
+        section.style.height="80%"
+        section.style.width="100%"
+        section.style.display="flex"
+        section.style.gap="50px"
+        section.style.backgroundColor="red"
+        document.body.appendChild(section)
+        let about = document.createElement("div")
+        about.style.height="70%"
+        about.style.width="50%"
+        // about.style.backgroundColor="green"
+        section.appendChild(about)
+        aboutP = document.createElement("p")
+        about.style.margin="20px"
+        aboutP.innerText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nemo excepturi distinctio autem aut sequi! Rem in optio iste natus tempora minus ut libero id eius perferendis quisquam, minima inventore?ipsum dolor sit amet consectetur adipisicing elit. Minus nemo excepturi distinctio autem aut sequi! Rem in optio iste natus tempora minus ut libero id eius perferendis quisquam, minima inventore?"
+        aboutP.style.color="white"
+       
+        about.appendChild(aboutP)
+        let mission = document.createElement("div")
+        section.appendChild(mission)
+        missionP = document.createElement("p")
+        mission.style.height="70%"
+        mission.style.width="50%"
+       mission.style.margin="20px"
+        missionP.innerText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nemo excepturi distinctio autem aut sequi! Rem in optio iste natus tempora minus ut libero id eius perferendis quisquam, minima inventore?ipsum dolor sit amet consectetur adipisicing elit. Minus nemo excepturi distinctio autem aut sequi! Rem in optio iste natus tempora minus ut libero id eius perferendis quisquam, minima inventore?"
+        missionP.style.color="white"
+        mission.appendChild(missionP)
+   </script>
+</body>
+</html>

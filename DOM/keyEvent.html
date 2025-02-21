@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        let div=document.createElement("div")
+        let p=document.createElement("p")
+        div.style.height="300px"
+        div.style.width="300px"
+        div.style.backgroundColor="red"
+        document.body.appendChild(div)
+        document.body.style.backgroundColor="black"
+        //Keydown/KeyUp event
+        let positionX = 0
+        let positionY = 0
+        document.addEventListener("keydown",(event)=>{
+            if(event.key=="ArrowDown"){
+                positionY +=10
+            }
+            if(event.key=="ArrowUp"){
+                positionY -=10
+            }
+            if(event.key=="ArrowLeft"){
+                positionX -=10
+            }
+            if(event.key=="ArrowRight"){
+                positionX +=10
+            }
+            div.style.transform=`translate(${positionX}px,${positionY}px)`
+        })
+        document.addEventListener("keyup",()=>{
+            p.textContent+=event.key
+        })
+    </script>
+</body>
+</html>

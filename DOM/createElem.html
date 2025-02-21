@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+            font-size: 30px;
+            /* color: red; */
+            text-align: justify;
+            letter-spacing: 2px;
+        }
+
+        .main-section {
+            display: flex;
+            background-color: green;
+            gap: 10px;
+            height: 80%;
+            width: 90%;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        //creating page using d om with styling
+
+        document.body.style.backgroundColor = "red"
+        document.body.style.height = "100vh"
+        document.body.style.width = "100%"
+        document.body.style.display = "flex"
+        document.body.style.justifyContent = "center"
+        document.body.style.alignItems = "center"
+
+        //creating section
+        let mainSection = document.createElement("section")
+
+        // mainSection.style.backgroundColor = "blue"
+        // mainSection.style.height = "80%"
+        // mainSection.style.width = "90%"
+        // mainSection.style.display = "flex"
+        // mainSection.style.gap = "20px"
+
+        mainSection.className = "main-section"
+        document.body.appendChild(mainSection)
+
+        //creating about and missoion containers
+        let aboutContainer = document.createElement("div")
+        let missoionContainer = document.createElement("div")
+
+        aboutContainer.style.height = "100%"
+        aboutContainer.style.width = "50%"
+        // aboutContainer.style.backgroundColor = "green"
+        // 
+        missoionContainer.style.height = "100%"
+        missoionContainer.style.width = "50%"
+        // missoionContainer.style.backgroundColor = "cyan"
+
+
+        mainSection.appendChild(aboutContainer)
+        mainSection.appendChild(missoionContainer)
+
+        let hAbout = document.createElement("h1")
+        hAbout.innerText = "About Us"
+        hAbout.style.textAlign = "center"
+
+        let hMission = document.createElement("h1")
+        hMission.innerText = "Our Miission"
+        hMission.style.textAlign = "center"
+
+
+        aboutContainer.appendChild(hAbout)
+        missoionContainer.appendChild(hMission)
+
+
+        //adding paragraph
+        let aboutP = document.createElement("p")
+        let missionP = document.createElement("p")
+
+        aboutP.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nemo excepturi distinctio autem aut sequi! Rem in optio iste natus tempora minus ut libero id eius perferendis quisquam, minima inventore?"
+        missionP.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nemo excepturi distinctio autem aut sequi! Rem in optio iste natus tempora minus ut libero id eius perferendis quisquam, minima inventore?"
+
+        aboutContainer.appendChild(aboutP)
+        missoionContainer.appendChild(missionP)
+
+
+    </script>
+
+</body>
+
+</html>
