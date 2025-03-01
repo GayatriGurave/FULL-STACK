@@ -33,8 +33,8 @@
             }
             div.style.transform=`translate(${positionX}px,${positionY}px)`
         })
-        document.addEventListener("keyup",()=>{
-            p.textContent+=event.key
+        document.addEventListener("keydown",(event)=>{
+            p.textContent += event.key
         })
     </script>
 </body>

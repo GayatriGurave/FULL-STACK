@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dragArea{
+            height: 500px;
+            width: 500px;
+            background-color: pink;
+            position: relative;
+        }
+        #dragElement{
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            position: absolute;
+            cursor: pointer;
+        }
+        #coordinateDisplay{
+            margin-top: 20px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="dragArea">
+        <div id="dragElement">
+
+        </div>
+    </div>
+    <h1 id="coordinateDisplay" style="font-size: larger;">X Axis=0,Y Axis=0</h1>
+    <script>
+        let dragElement = document.getElementById('dragElement')
+        let isDragging = false
+        let offsetX,offsetY;
+
+        dragElement.addEventListener("mousedown",function(e){
+            isDragging=true
+            console.log("clientX",e.clientX);
+            console.log("clientY",e.clientY);
+
+            console.log("dragElementOfLeft",dragElement.offsetLeft);
+            console.log("dragElementOfTop",dragElement.offsetTop);
+
+            offsetX=e.clientX-dragElement.offsetLeft
+            offsetY=e.clientY-dragElement.offsetTop
+
+            console.log("offX",offsetX);
+            console.log("offY",offsetY);
+
+            // Add event listener for mousemove
+            document.addEventListener('mousemove', onMouseMove);
+
+            // Add event listener for mouseup to stop dragging
+            document.addEventListener('mouseup', onMouseUp);
+        });
+
+        function onMouseMove(e){
+            if(isDragging){
+                let newX = e.clientX - offsetX;
+                let newY = e.clientY - offsetY;
+                console.log("newX",newX);
+                console.log("newY",newY);
+                dragElement.style.left = newX + 'px';
+                dragElement.style.top = newY + 'px';
+
+                coordinateDisplay.textContent = `X Axis: ${newX}, Y Axis: ${newY}`;
+            }
+            
+        }
+
+        function onMouseUp(){
+            isDragging = false
+            document.removeEventListener('mousemove',onMouseMove)
+            document.removeEventListener('mouseup',onMouseUp)
+        }
+    </script>
+</body>
+</html>

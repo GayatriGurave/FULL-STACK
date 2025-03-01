@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="text">
+        <h1>Scroll Event</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, error aperiam voluptatem reprehenderit commodi quisquam rem! Quibusdam, officiis architecto. Laudantium eveniet, libero consectetur pariatur voluptates error assumenda numquam odio sed!</p>
+        <h1>Scroll Event</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, error aperiam voluptatem reprehenderit commodi quisquam rem! Quibusdam, officiis architecto. Laudantium eveniet, libero consectetur pariatur voluptates error assumenda numquam odio sed!</p>
+        <h1>Scroll Event</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, error aperiam voluptatem reprehenderit commodi quisquam rem! Quibusdam, officiis architecto. Laudantium eveniet, libero consectetur pariatur voluptates error assumenda numquam odio sed!</p>
+        <h1>Scroll Event</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, error aperiam voluptatem reprehenderit commodi quisquam rem! Quibusdam, officiis architecto. Laudantium eveniet, libero consectetur pariatur voluptates error assumenda numquam odio sed!</p>
+    </div>
+    <script>
+        window.addEventListener('wheel',function fun(event){
+        //    if(event.deltaY<0)
+        if(window.pageYOffset>400){
+            document.body.style.backgroundColor="black"
+            document.body.style.color="white"
+            console.log("over 400px..");
+           }else {
+            document.body.style.backgroundColor="white"
+            document.body.style.color="black"
+           console.log("under 400px..");
+           }
+        })
+    
+        
+    </script>
+</body>
+</html>
